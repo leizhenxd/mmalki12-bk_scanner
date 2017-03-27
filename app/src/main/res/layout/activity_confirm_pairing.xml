@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_confirm_pairing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:paddingStart="0dp"
+    android:paddingLeft="0dp"
+    android:background="@color/colorBackground"
+    android:paddingRight="0dp"
+    android:paddingEnd="0dp"
+    tools:context="com.example.malki.bkapp.ConfirmPairing">
+
+    <include
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetEnd="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView13"
+        android:layout_marginBottom="148dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_above="@+id/button8"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="No"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button9"
+        android:stateListAnimator="@null"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:textColor="@color/colorButton"
+        android:background="@color/colorBackground"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:layout_below="@+id/textView13"
+        android:layout_alignLeft="@+id/textView13"
+        android:layout_alignStart="@+id/textView13" />
+
+    <Button
+        android:text="Yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="97dp"
+        android:id="@+id/button8"
+        android:stateListAnimator="@null"
+        android:textColor="@color/colorButton"
+        android:background="@color/colorBackground"
+        android:textSize="24sp"
+        android:textAllCaps="true"
+        android:layout_marginRight="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView13"
+        android:layout_alignEnd="@+id/textView13" />
+</RelativeLayout>

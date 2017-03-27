@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_scan_vin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:paddingStart="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingEnd="0dp"
+    android:background="@color/colorBackground"
+    tools:context="com.example.malki.bkapp.ScanVIN">
+
+    <include
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetEnd="0dp"
+
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:textColor="@color/colorButton"
+        android:stateListAnimator="@null"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:id="@+id/button4"
+        android:textSize="24sp"
+        android:layout_above="@+id/textView10"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/colorWhite"
+        android:id="@+id/textView10"
+        android:layout_marginBottom="15dp"
+        android:layout_above="@+id/button5"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@color/colorButton"
+        android:stateListAnimator="@null"
+        android:id="@+id/button5"
+        android:layout_marginBottom="34dp"
+        android:textSize="24sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:id="@+id/textView8"
+        android:text="tedecenej"
+        android:textSize="18sp"
+        android:layout_marginBottom="13dp"
+        android:layout_above="@+id/imageView4"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="167dp"
+        android:src="@drawable/compliance"
+        android:id="@+id/imageView4"
+        android:layout_marginBottom="23dp"
+        android:layout_above="@+id/button4"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="600dp"
+
+    android:background="#4B3F3F"
+    android:layout_height="95dp">
+
+    <ImageView
+        android:id="@+id/animation"
+        android:layout_width="54dp"
+        android:layout_height="75dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    <TextView
+        android:text="Verifying - Please wait"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:id="@+id/textView18"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_alignTop="@+id/animation"
+        android:layout_toRightOf="@+id/animation"
+        android:layout_toEndOf="@+id/animation"
+        android:layout_marginTop="30dp" />
+</RelativeLayout>

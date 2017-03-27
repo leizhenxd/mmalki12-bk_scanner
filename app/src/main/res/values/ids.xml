@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="button" type="id" />
+    <item name="buttonConnect" type="id" />
+    <item name="buttonDisconnect" type="id"/>
+    <item name="scanVINbutton" type="id"/>
+    <item name="scanTrackerbutton" type="id"/>
+    <item name="marryToDatabase" type="id"/>
+    <item name="VIN" type="id"/>
+    <item name="tracker" type="id"/>
+    <item name="disconnectReasonList" type="id"/>
+    <item name="mImageView" type="id"/>
+    <item name="textv" type="id"/>
+    <item name="confirm" type="id"/>
+    <item name="list" type="id"/>
+    <item name="bkhome" type="id"/>
+    <item name="info" type ="id"/>
+</resources>

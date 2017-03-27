@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+
+        <TextView
+            android:text="Create new account"
+            android:layout_width="match_parent"
+            android:layout_height="103dp"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:id="@+id/textView5"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:backgroundTint="@color/colorWhite"
+            android:fontFamily="monospace"
+            android:textColorHint="@color/colorHint"
+            android:inputType="textPersonName"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:ems="10"
+            android:layout_marginTop="21dp"
+            android:id="@+id/editText6"
+            android:hint="First name" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:fontFamily="monospace"
+            android:backgroundTint="@color/colorWhite"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorHint"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:id="@+id/editText7"
+            android:hint="Last name"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:inputType="phone"
+            android:ems="10"
+            android:backgroundTint="@color/colorWhite"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorHint"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="35dp"
+            android:id="@+id/editText8"
+            android:hint="Mobile No." />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:ems="10"
+            android:textColor="@color/colorWhite"
+            android:backgroundTint="@color/colorWhite"
+            android:textColorHint="@color/colorHint"
+            android:fontFamily="monospace"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="35dp"
+            android:id="@+id/editText9"
+            android:maxLength="4"
+            android:hint="New PIN (4 digits)" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:ems="10"
+            android:backgroundTint="@color/colorWhite"
+            android:id="@+id/editText"
+            android:fontFamily="monospace"
+            android:maxLength="4"
+
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorHint"
+            android:hint="Re-enter PIN"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="17dp" />
+
+        <Button
+            android:text="Confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorButton"
+            android:layout_marginTop="55dp"
+            android:stateListAnimator="@null"
+            android:textAllCaps="true"
+            android:background="@color/colorBackground"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:id="@+id/confirm"
+            android:textSize="24sp" />
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>

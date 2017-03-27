@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:paddingStart="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingEnd="0dp"
+    android:theme="@style/AppTheme"
+    tools:context="com.example.malki.bkapp.MainActivity">
+
+
+    <include
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetEnd="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/include2" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:id="@id/buttonDisconnect"
+        android:text="Disconnect/Sale"
+        android:stateListAnimator="@null"
+        android:background="@color/colorBackground"
+        android:textColor="@color/colorButton"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:layout_below="@+id/buttonConnect"
+        android:layout_alignLeft="@+id/buttonConnect"
+        android:layout_alignStart="@+id/buttonConnect"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="52dp" />
+
+    <Button
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:id="@id/buttonConnect"
+        android:text="Connect/New"
+       android:stateListAnimator="@null"
+        android:textAllCaps="true"
+        android:background="@color/colorBackground"
+        android:textColor="@color/colorButton"
+        android:textSize="24sp"
+        android:layout_marginTop="155dp"
+        android:layout_below="@+id/include2"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_insert_tracker"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:paddingStart="0dp"
+    android:paddingLeft="0dp"
+    android:background="@color/colorBackground"
+    android:paddingRight="0dp"
+    android:paddingEnd="0dp"
+    tools:context="com.example.malki.bkapp.InsertTracker">
+
+    <include
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetEnd="0dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="OK, Done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="true"
+        android:layout_marginBottom="75dp"
+        android:stateListAnimator="@null"
+        android:background="@color/colorBackground"
+        android:textColor="@color/colorButton"
+        android:id="@+id/button2"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/colorWhite"
+        android:id="@+id/text3"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp" />
+</RelativeLayout>

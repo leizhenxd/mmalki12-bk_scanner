@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">BK Scanner</string>
+
+    <string-array name="disconnectReason">
+        <item>Sale</item>
+        <item>Service</item>
+        <item>Pre-Delivery</item>
+        <item>Dealership Exchange</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string name="verified_number">a</string>
+
+    <string name="pin">b</string>
+
+    <string name="oauth">c</string>
+
+    <string name="ivector">d</string>
+
+    <string name="last_name">e</string>
+
+    <string name="mobile">f</string>
+
+
+    <string name="first_name">g</string>
+
+</resources>

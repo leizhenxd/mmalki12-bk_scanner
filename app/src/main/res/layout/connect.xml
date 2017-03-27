@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:paddingStart="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingEnd="0dp"
+    tools:context="com.example.malki.bkapp.ConnectActivity">
+
+    <include
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetEnd="0dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@id/scanVINbutton"
+        android:stateListAnimator="@null"
+        android:textColor="@color/colorButton"
+        android:text="Scan VIN"
+        android:background="@color/colorBackground"
+        android:textAllCaps="true"
+        android:layout_marginBottom="108dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="TextView"
+        android:textColor="@color/colorWhite"
+
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView17"
+        android:textSize="18sp"
+        android:layout_above="@+id/scanVINbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="143dp" />
+
+
+</RelativeLayout>
