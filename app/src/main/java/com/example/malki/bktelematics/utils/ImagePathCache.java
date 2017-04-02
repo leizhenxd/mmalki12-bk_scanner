@@ -14,6 +14,9 @@ public class ImagePathCache {
     public static String picturePath = "";
     public static String vinPicturePath = "";
 
+    public static String manualPictrueBase64 = "";
+    public static String manuaVinPictrueBase64 = "";
+
     public static String getPicBase64(){
         if("".equals(picturePath)) return "";
         BitmapFactory.Options bmOptions = new BitmapFactory.Options();

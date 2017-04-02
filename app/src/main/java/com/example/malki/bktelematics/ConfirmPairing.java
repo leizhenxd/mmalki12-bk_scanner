@@ -367,6 +367,18 @@ public class ConfirmPairing extends Activity {
                 nameValuePairs.add(new BasicNameValuePair("sn", sn));
                 nameValuePairs.add(new BasicNameValuePair("vinfull", vinfull));
                 nameValuePairs.add(new BasicNameValuePair("pic", ImagePathCache.getPicBase64()));
+                if("".equals(ImagePathCache.manualPictrueBase64)) {
+                    nameValuePairs.add(new BasicNameValuePair("pic", ImagePathCache.getPicBase64()));
+                }
+                else {
+                    nameValuePairs.add(new BasicNameValuePair("pic", ImagePathCache.manualPictrueBase64));
+                }
+                if("".equals(ImagePathCache.manuaVinlPictrueBase64)) {
+                    nameValuePairs.add(new BasicNameValuePair("vinpic", ImagePathCache.getVinPicBase64()));
+                }
+                else {
+                    nameValuePairs.add(new BasicNameValuePair("vinpic", ImagePathCache.manuaVinlPictrueBase64));
+                }
                 nameValuePairs.add(new BasicNameValuePair("vinpic", ImagePathCache.getVinPicBase64()));
                 nameValuePairs.add(new BasicNameValuePair("firstName", firstName));
                 nameValuePairs.add(new BasicNameValuePair("lastName", lastName));

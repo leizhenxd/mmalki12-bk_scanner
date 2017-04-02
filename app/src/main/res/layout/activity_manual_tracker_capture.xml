@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:id="@+id/activity_manual_tracker_capture"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:background="@color/colorBackgroundGray"
+    tools:context="com.example.malki.bktelematics.ManualTrackerCapture">
+    <include
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetEnd="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/include4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView54"
+        android:text="use the camera to capture a photo"
+        android:layout_below="@+id/include4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView55"
+        android:text="of tracking device 1801111111"
+        android:layout_below="@+id/textView54"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        />
+
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="200dp"
+        android:src="@drawable/tracker_image"
+        android:layout_marginTop="48dp"
+        android:id="@+id/imageView17"
+        android:layout_below="@+id/textView55"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:text="CONTINUE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:stateListAnimator="@null"
+        android:background="@android:color/transparent"
+        android:textColor="@color/colorButton"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/button22" />
+
+</RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

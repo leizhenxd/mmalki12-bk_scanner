@@ -76,7 +76,8 @@
             android:label="@string/title_activity_capture_message" />
         <activity android:name="com.example.malki.bktelematics.ManualTracker" />
         <activity android:name="com.example.malki.bktelematics.ActivityLog" />
-        <activity android:name="com.example.malki.bktelematics.Help"></activity>
+        <activity android:name="com.example.malki.bktelematics.Help" />
+        <activity android:name="com.example.malki.bktelematics.ManualTrackerCapture"></activity>
     </application>
 
 </manifest>

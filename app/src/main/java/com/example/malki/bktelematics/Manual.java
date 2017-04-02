@@ -17,6 +17,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.malki.bktelematics.utils.ImagePathCache;
 import com.example.malki.telematics.R;
 
 import java.io.ByteArrayOutputStream;
@@ -170,7 +171,10 @@ public class Manual extends Activity {
 
             Intent connect = new Intent(Manual.this, Compliance.class);
             connect.putExtra("trackerID", trackerID);
-            connect.putExtra("pic", encoded);
+
+            ImagePathCache.vinPicturePath = "";
+            ImagePathCache.manuaVinPictrueBase64 = encoded;
+
 
             if(fromConnect){
                 connect.putExtra("fromConnect", true);
