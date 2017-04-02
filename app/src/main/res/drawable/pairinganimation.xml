@@ -1,0 +1,29 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+
+    <item android:drawable="@drawable/bkanimation10" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation09" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation08" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation07" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation06" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation05" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation04" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation03" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation02" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation01" android:duration="75" />
+
+    <item android:drawable="@drawable/bkanimation10" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation09" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation08" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation07" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation06" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation05" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation04" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation03" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation02" android:duration="75" />
+    <item android:drawable="@drawable/bkanimation01" android:duration="75" />
+
+
+
+
+</animation-list>

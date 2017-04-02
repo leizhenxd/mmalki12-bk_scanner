@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:id="@+id/activity_manual_tracker"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:background="@color/colorBackground"
+    tools:context="com.example.malki.bktelematics.ManualTracker">
+
+    <include
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetEnd="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/include3" />
+
+    <TextView
+        android:text="TRACKER ID - ENTER MANUALLY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+
+        android:id="@+id/textView41" />
+
+    <Button
+        android:text="CONTINUE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:stateListAnimator="@null"
+        android:background="@color/colorBackground"
+        android:textColor="@color/colorButton"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:layout_marginBottom="14dp"
+        android:id="@+id/button9" />
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="130dp"
+        android:src="@drawable/manualtracker"
+        android:layout_marginTop="18dp"
+        android:id="@+id/imageView12"
+        android:layout_below="@+id/textView43"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Please type the 10-digit ID number"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="25dp"
+        android:id="@+id/textView42"
+        android:layout_below="@+id/textView41"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="(located above the tracker barcode)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+
+        android:id="@+id/textView43"
+        android:layout_below="@+id/textView42"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:textColor="@color/colorWhite"
+        android:backgroundTint="@color/colorWhite"
+        android:textColorHint="@color/colorHint"
+        android:fontFamily="monospace"
+        android:hint="Re-enter ID"
+        android:id="@+id/editText13"
+        android:layout_below="@+id/editText12"
+        android:layout_alignLeft="@+id/editText12"
+        android:layout_alignStart="@+id/editText12"
+        android:layout_marginTop="14dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:textColor="@color/colorWhite"
+        android:backgroundTint="@color/colorWhite"
+        android:textColorHint="@color/colorHint"
+        android:fontFamily="monospace"
+        android:hint="Enter 10-digit ID"
+        android:id="@+id/editText12"
+        android:layout_below="@+id/imageView12"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp" />
+
+</RelativeLayout>
+
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="@color/colorToolbar"/>
+
+</android.support.v4.widget.DrawerLayout>
