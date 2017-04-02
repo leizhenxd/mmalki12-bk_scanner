@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
     android:id="@+id/activity_insert_tracker"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +17,7 @@
     android:background="@color/colorBackground"
     android:paddingRight="0dp"
     android:paddingEnd="0dp"
-    tools:context="com.example.malki.bkapp.InsertTracker">
+    tools:context="com.example.malki.bktelematics.InsertTracker">
 
     <include
         layout="@layout/toolbar_layout"
@@ -22,28 +28,79 @@
         android:contentInsetEnd="0dp"
         android:layout_height="wrap_content"/>
 
-    <Button
-        android:text="OK, Done"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textAllCaps="true"
-        android:layout_marginBottom="75dp"
-        android:stateListAnimator="@null"
-        android:background="@color/colorBackground"
-        android:textColor="@color/colorButton"
-        android:id="@+id/button2"
-        android:textSize="24sp" />
-
     <TextView
         android:text="TextView"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
-
+        android:textAlignment="center"
         android:textColor="@color/colorWhite"
         android:id="@+id/text3"
-        android:layout_centerVertical="true"
+        android:textSize="18sp"
+        android:layout_marginTop="110dp"
+        android:gravity="center"
+        android:layout_below="@+id/include"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Now please insert the Tracker into your vehicle's OBD-II port"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:layout_below="@+id/text3"
         android:layout_centerHorizontal="true"
-        android:textSize="18sp" />
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:id="@+id/textView25" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/tracker_image"
+        android:id="@+id/imageView6"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="OK, Done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:layout_marginBottom="15dp"
+        android:stateListAnimator="@null"
+        android:background="@color/colorBackground"
+        android:textColor="@color/colorButton"
+        android:id="@+id/button2"
+        android:textSize="24sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/arrow_up_float"
+        android:id="@+id/imageView7"
+        android:layout_above="@+id/imageView6"
+        />
+
+    <TextView
+        android:text="(usually under the driver's console)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorHint"
+
+        android:id="@+id/textView26" />
 </RelativeLayout>
+
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="@color/colorToolbar"/>
+
+</android.support.v4.widget.DrawerLayout>

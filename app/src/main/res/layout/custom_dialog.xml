@@ -7,27 +7,25 @@
 
     <ImageView
         android:id="@+id/animation"
-        android:layout_width="54dp"
-        android:layout_height="75dp"
+        android:layout_width="75dp"
+        android:layout_height="60dp"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"
-        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="Verifying - Please wait"
         android:layout_width="200dp"
         android:layout_height="80dp"
         android:id="@+id/textView18"
-        android:layout_marginLeft="60dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
         android:layout_alignTop="@+id/animation"
         android:layout_toRightOf="@+id/animation"
         android:layout_toEndOf="@+id/animation"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="16dp" />
 </RelativeLayout>

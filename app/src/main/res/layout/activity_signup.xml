@@ -17,6 +17,7 @@
             android:layout_height="103dp"
             android:textColor="@color/colorWhite"
             android:gravity="center"
+            android:textAllCaps="true"
             android:id="@+id/textView5"
             android:textSize="18sp" />
 
@@ -32,6 +33,7 @@
             android:ems="10"
             android:layout_marginTop="21dp"
             android:id="@+id/editText6"
+            android:gravity="center"
             android:hint="First name" />
 
         <EditText
@@ -47,6 +49,7 @@
             android:ems="10"
             android:id="@+id/editText7"
             android:hint="Last name"
+            android:gravity="center"
             />
 
         <EditText
@@ -61,7 +64,8 @@
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_marginTop="35dp"
             android:id="@+id/editText8"
-            android:hint="Mobile No." />
+            android:hint="Mobile No."
+            android:gravity="center"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -76,7 +80,8 @@
             android:layout_marginTop="35dp"
             android:id="@+id/editText9"
             android:maxLength="4"
-            android:hint="New PIN (4 digits)" />
+            android:hint="New PIN (4 digits)"
+            android:gravity="center"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -91,6 +96,7 @@
             android:textColor="@color/colorWhite"
             android:textColorHint="@color/colorHint"
             android:hint="Re-enter PIN"
+            android:gravity="center"
             android:layout_marginTop="5dp"
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_marginBottom="17dp" />

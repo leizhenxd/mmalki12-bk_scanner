@@ -6,7 +6,15 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorHint">#80ffffff</color>
     <color name="colorButton">#24A6D9</color>
-    <color name="colorBackground">#232323</color>
+    <color name="colorBackground">#0F253E</color>
+    <color name="colorBackgroundGray">#2F2F2F</color>
     <color name="colorToolbar">#424242</color>
+    <color name="colorActivity">#ECECEC</color>
+    <color name="colorDate">#8F8F8F</color>
+    <color name="colorDropdown">#F5F5F5</color>
+    <color name="colorGreen">#2BB00E</color>
+    <color name="colorAmber">#FB7C02</color>
+    <color name="colorRed">#C2391E</color>
+    <color name="colorTitle">#0A2A40</color>
 
 </resources>

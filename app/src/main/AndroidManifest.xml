@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.malki.bkapp">
+    package="com.example.malki.telematics">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/launcher"
-        android:label="BK Telematics"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Telematics"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SplashActivity"
+            android:name="com.example.malki.bktelematics.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,54 +21,62 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.malki.bktelematics.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ConnectActivity"
+            android:name="com.example.malki.bktelematics.ConnectActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DisconnectActivity"
+            android:name="com.example.malki.bktelematics.DisconnectActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SignupActivity"
+            android:name="com.example.malki.bktelematics.SignupActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AuthenticationActivity"
+            android:name="com.example.malki.bktelematics.AuthenticationActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".PromptDiscActivity"
+            android:name="com.example.malki.bktelematics.PromptDiscActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".BKSigninActivity"
+            android:name="com.example.malki.bktelematics.BKSigninActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".LoginActivity"
+            android:name="com.example.malki.bktelematics.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".InsertTracker"
+            android:name="com.example.malki.bktelematics.InsertTracker"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ScanVIN"
+            android:name="com.example.malki.bktelematics.ScanVIN"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Manual"
+            android:name="com.example.malki.bktelematics.Manual"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Compliance"
+            android:name="com.example.malki.bktelematics.Compliance"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ConfirmPairing"
+            android:name="com.example.malki.bktelematics.ConfirmPairing"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DisconnectTracker"
+            android:name="com.example.malki.bktelematics.DisconnectTracker"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ScanTracker"
-            android:screenOrientation="portrait"></activity>
+            android:name="com.example.malki.bktelematics.ScanTracker"
+            android:screenOrientation="portrait" />
 
-        <service android:name=".FetchDisconnectTrackers" />
+        <service android:name="com.example.malki.bktelematics.FetchDisconnectTrackers" />
 
-        <activity android:name=".Message"></activity>
+        <activity android:name="com.example.malki.bktelematics.Message" />
+        <activity android:name="com.example.malki.bktelematics.Landing" />
+        <activity android:name="com.example.malki.bktelematics.SMSDigestActivity" />
+        <activity
+            android:name="com.example.malki.bktelematics.CaptureMessage"
+            android:label="@string/title_activity_capture_message" />
+        <activity android:name="com.example.malki.bktelematics.ManualTracker" />
+        <activity android:name="com.example.malki.bktelematics.ActivityLog" />
+        <activity android:name="com.example.malki.bktelematics.Help"></activity>
     </application>
 
 </manifest>

@@ -13,7 +13,7 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:minHeight="?attr/actionBarSize"
-        android:background="@color/colorToolbar"
+        android:background="@color/colorBackground"
         android:layout_width="fill_parent"
         android:paddingTop="0dp"
         android:paddingBottom="0dp"
@@ -31,13 +31,23 @@
 
 
         <ImageView
-            android:src="@drawable/bk09"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:src="@drawable/bkmain"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
             android:id="@id/bkhome"
             android:layout_gravity="center_horizontal"
 
             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pageTitle"
+
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+
+          />
 
 
         <ImageView
@@ -45,14 +55,15 @@
             android:layout_height="45dp"
             android:layout_gravity = "right"
             android:id="@id/info"
-            android:src="@android:drawable/ic_menu_info_details" />
+
+            />
         
         <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_gravity="left"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="right"
             android:id="@id/list"
-            android:src="@android:drawable/ic_menu_sort_by_size" />
+            android:src="@drawable/hamburger" />
 
     </android.support.v7.widget.Toolbar>
     

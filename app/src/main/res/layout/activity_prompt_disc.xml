@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
     android:id="@+id/activity_prompt_disc"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,8 +16,8 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingEnd="0dp"
-    android:background="@color/colorBackground"
-    tools:context="com.example.malki.bkapp.PromptDiscActivity">
+    android:background="@drawable/splash"
+    tools:context="com.example.malki.bktelematics.PromptDiscActivity">
 
     <include
         layout="@layout/toolbar_layout"
@@ -27,9 +33,10 @@
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
-
+        android:textAlignment="center"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorHint"
+        android:gravity="center"
         android:layout_above="@+id/button13"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="177dp"
@@ -80,3 +87,12 @@
         android:layout_alignStart="@+id/textView" />
 
 </RelativeLayout>
+
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="@color/colorToolbar"/>
+
+</android.support.v4.widget.DrawerLayout>

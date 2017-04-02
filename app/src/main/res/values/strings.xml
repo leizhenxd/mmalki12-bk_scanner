@@ -22,7 +22,100 @@
 
     <string name="mobile">f</string>
 
+    <string name="dealerID">h</string>
+
 
     <string name="first_name">g</string>
+    <string name="title_activity_capture_message">CaptureMessage</string>
+
+    <string-array name="help_title_general">
+        <item>General Inquiries - 1300 302 199</item>
+        <item>Black Knight Telematics overview</item>
+        <item>Who can use Black Knight Telematics</item>
+        <item>Reset forgotten 4-digit PIN</item>
+        <item>Version/Update info</item>
+        <item>Launch Black Knight tracking website (bk-gts.com)</item>
+    </string-array>
+
+    <string-array name="help_body_general">
+        <item> </item>
+        <item>Black Knight Telematics (BKT) is a professional wholesale vehicle management system combining state-of-the-art intelligent app technology with the Black Knight X3 GPS tracking device. A complete end-to-end solution for businesses with high-volume/high-turnover vehicle inventories, the BKT system:
+            \n
+            \n· instantly pairs (and unpairs) tracking devices with vehicles, in a simple 2-minute process
+            \n· empowers individual users with full accountability over pairings and reporting
+            \n· senses when trackers have been connected or disconnected
+            \n· reports when trackers have exited or re-entered a geofence area
+            \n· instantly syncs with the Black Knight mapping interface (for real-time tracking)
+            \n· provides 12 months playback history and vehicle logging data
+
+        \n \n Black Knight Telematics is not to be confused with Black Knight Global Tracking Systems (bk-gts.com), which is a tracking device and software system designed for personal and small business tracking.</item>
+        <item>The Black Knight Telematics (BKT) app is not for designed for general public use and does not provide a standalone tracking service (like Black Knight Global Tracking Systems). Instead it is a utility application for managing high-volume commercial vehicle fleets. Users must be part of a pre-arranged program agreement between BKT and the wholesale vehicle finance company.</item>
+        <item>Forgot your 4-digit PIN? > Please log in with your dealer username and password to change your PIN > OK</item>
+        <item>Beta version 1.0 © 2017 Black Knight Telematics and NanoTag Technology Pty Ltd</item>
+        <item>https://www.bk-gts.com</item>
+
+    </string-array>
+
+    <string-array name="help_title_verified">
+        <item>Black Knight Telematics overview</item>
+        <item>Who can use Black Knight Telematics</item>
+        <item>How the BKT app works</item>
+        <item>How the tracker works</item>
+        <item>Finding the OBD-II port</item>
+        <item>When/how to CONNECT a tracker</item>
+        <item>When/how to DISCONNECT a tracker</item>
+        <item>How to disconnect for a SALE</item>
+        <item>How to disconnect for SERVICE or PRE-DELIVERY</item>
+        <item>How to disconnect for EXCHANGE with a dealership</item>
+        <item>Where to find the vehicle compliance plate</item>
+        <item>If the compliance plate doesn’t have a barcode</item>
+        <item>If your phone won’t scan properly</item>
+        <item>Viewing the ACTIVITY list</item>
+        <item>Vehicle model, colour and VIN</item>
+        <item>What PAIRED means</item>
+        <item>What UNPAIRED means</item>
+        <item>What INCOMPLETE means</item>
+        <item>How a successful pairing can still show as INCOMPLETE</item>
+        <item>Version/Update info</item>
+        <item>Launch Black Knight tracking website (bk-gts.com)</item>
+        <item>General Inquiries - 1300 302 199</item>
+    </string-array>
+
+    <string-array name="help_body_verified">
+        <item>Black Knight Telematics (BKT) is a professional wholesale vehicle management system combining state-of-the-art intelligent app technology with the Black Knight X3 GPS tracking device. A complete end-to-end solution for businesses with high-volume/high-turnover vehicle inventories, the BKT system:
+            \n
+            \n· instantly pairs (and unpairs) tracking devices with vehicles, in a simple 2-minute process
+            \n· empowers individual users with full accountability over pairings and reporting
+            \n· senses when trackers have been connected or disconnected
+            \n· reports when trackers have exited or re-entered a geofence area
+            \n· instantly syncs with the Black Knight mapping interface (for real-time tracking)
+            \n· provides 12 months playback history and vehicle logging data
+
+        \n \n Black Knight Telematics is not to be confused with Black Knight Global Tracking Systems (bk-gts.com), which is a tracking device and software system designed for personal and small business tracking.</item>
+        <item>The Black Knight Telematics (BKT) app is not for designed for general public use and does not provide a standalone tracking service (like Black Knight Global Tracking Systems). Instead it is a utility application for managing high-volume commercial vehicle fleets. Users must be part of a pre-arranged program agreement between BKT and the wholesale vehicle finance company.</item>
+        <item>The Black Knight Telematics mobile application provides authorised users with access to manage wholesale vehicle inventories at any time and on any device. Dealerships are pre-authorised by the wholesale vehicle finance company as per arrangement with BKT. The user (usually a dealership stock controller) inserts a Black Knight tracking device into a vehicle, then uses the BKT app scan function to \'pair\' it with a vehicle. If a vehicle is sold or serviced, the user performs the same app scan function to \'unpair\' the tracker from the vehicle. If a tracker is disconnected or connected without the BKT app, an alert is triggered. Outstanding alerts are managed in a user\'s Activity log.</item>
+        <item>The Black Knight® X3 \‘plug and play\’ GPS/3GSM tracker gives instant tracking of cars and fleets from the OBD-II port of any vehicle. It detects when it’s been connected, disconnected, if it’s on the move, or if it exits or enters a specified ‘geofence’ area. When moving, the X3’s powerful antenna updates its GPS position every 15 seconds.
+            Each Black Knight tracker has a unique barcode and ID number. Using the BKT app, the dealer scans the barcode, then plugs the X3 into the vehicle they wish to pair it with. The physical connection is detected and matched to the BKT app’s pairing data.
+            Dealers are supplied with trackers in advance, and the BKT system detects which IDs are assigned to which dealership, which user within that dealership has interacted with it, and when.
+        </item>
+        <item>The OBD-II port is usually located under the driver’s console. Once inserted, the tracker receives a permanent supply of 12V power. Other than communicating with the Black Knight system, the X3 is completely passive and does not interrogate the vehicle’s on-board computer in any way.</item>
+        <item>to be completed</item>
+        <item>to be completed</item>
+        <item>to be completed</item>
+        <item>to be completed</item>
+        <item>to be completed</item>
+        <item>to be completed</item>
+        <item>to be completed</item>
+        <item>to be completed</item>
+        <item>to be completed</item>
+        <item>to be completed</item>
+        <item>to be completed</item>
+        <item>to be completed</item>
+        <item>to be completed</item>
+        <item>to be completed</item>
+        <item>Beta version 1.0 © 2017 Black Knight Telematics and NanoTag Technology Pty Ltd</item>
+        <item>https://www.bk-gts.com</item>
+        <item> </item>
+    </string-array>
 
 </resources>

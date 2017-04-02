@@ -10,11 +10,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3899a5a2-f683-4f03-849b-70e1be4d1651" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/androidTest/java/com/example/malki/bkapp/ApplicationTest.java" afterPath="$PROJECT_DIR$/src/androidTest/java/com/example/malki/bktelematics/ApplicationTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/AuthenticationActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/AuthenticationActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/BKSigninActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/BKSigninActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/Compliance.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/Compliance.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/ConfirmPairing.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/ConfirmPairing.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/ConnectActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/ConnectActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/CustomDialog.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/CustomDialog.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/CustomListAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/CustomListAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/DisconnectActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/DisconnectActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/DisconnectTracker.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/DisconnectTracker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/Encryptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/Encryptor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/FetchDisconnectTrackers.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/FetchDisconnectTrackers.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/GPSTracker.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/GPSTracker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/InsertTracker.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/InsertTracker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/LoginActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/LoginActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/MainActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/Manual.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/Manual.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/Message.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/Message.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/PromptDiscActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/PromptDiscActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/ScanTracker.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/ScanTracker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/ScanVIN.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/ScanVIN.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/SignupActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/SignupActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/SplashActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/SplashActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/example/malki/bkapp/ExampleUnitTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/example/malki/bktelematics/ExampleUnitTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-release.apk" afterPath="$PROJECT_DIR$/app-release.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/ConfirmPairing.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/ConfirmPairing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/LoginActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/Message.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/Message.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/PromptDiscActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/PromptDiscActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_authentication.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_authentication.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_bksignin.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_bksignin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_compliance.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_compliance.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_confirm_pairing.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_confirm_pairing.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_disconnect_tracker.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_disconnect_tracker.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_insert_tracker.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_insert_tracker.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_manual.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_manual.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_message.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_message.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_prompt_disc.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_prompt_disc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_scan_tracker.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_scan_tracker.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_scan_vin.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_scan_vin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_splash.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_splash.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/connect.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/connect.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/disconnect.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/disconnect.xml" />
     </list>
     <ignored path="app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,109 +85,100 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConfirmPairing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/ConfirmPairing.java">
+      <file leaf-file-name="PromptDiscActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/PromptDiscActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-649">
-              <caret line="285" column="80" selection-start-line="285" selection-start-column="80" selection-end-line="285" selection-end-column="80" />
+            <state relative-caret-position="230">
+              <caret line="292" column="80" selection-start-line="292" selection-start-column="80" selection-end-line="292" selection-end-column="80" />
               <folding>
-                <element signature="e#3703#3728#0" expanded="true" />
-                <marker date="1483556980383" expanded="false" signature="3770:3797" ph="&quot;d&quot;" />
+                <marker date="1484159180813" expanded="false" signature="3727:3752" ph="&quot;c&quot;" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthenticationActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/AuthenticationActivity.java">
+      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1422">
-              <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BKSigninActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/BKSigninActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1962">
-              <caret line="158" column="29" selection-start-line="158" selection-start-column="29" selection-end-line="158" selection-end-column="29" />
+            <state relative-caret-position="392">
+              <caret line="186" column="62" selection-start-line="186" selection-start-column="62" selection-end-line="186" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/LoginActivity.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-869">
-              <caret line="246" column="10" selection-start-line="246" selection-start-column="10" selection-end-line="246" selection-end-column="10" />
+            <state relative-caret-position="414">
+              <caret line="227" column="10" selection-start-line="227" selection-start-column="10" selection-end-line="227" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/ConnectActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1998">
-              <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/Message.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-703">
-              <caret line="189" column="62" selection-start-line="189" selection-start-column="62" selection-end-line="189" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_login.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_login.xml">
-          <provider selected="true" editor-type-id="android-designer2">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest">
             <state />
           </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="1044">
-              <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PromptDiscActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/PromptDiscActivity.java">
+      <file leaf-file-name="AuthenticationActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/AuthenticationActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-738">
-              <caret line="294" column="80" selection-start-line="294" selection-start-column="80" selection-end-line="294" selection-end-column="80" />
-              <folding>
-                <marker date="1483557024199" expanded="false" signature="3830:3855" ph="&quot;c&quot;" />
-              </folding>
+            <state relative-caret-position="-72">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Manual.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/Manual.java">
+      <file leaf-file-name="profile.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/drawable-mdpi/profile.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="splash.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/drawable-xhdpi/splash.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tracker_image.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/drawable-xhdpi/tracker_image.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toolbar_layout.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/toolbar_layout.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1656">
-              <caret line="107" column="43" selection-start-line="107" selection-start-column="43" selection-end-line="107" selection-end-column="43" />
+            <state relative-caret-position="76">
+              <caret line="36" column="34" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfirmPairing.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/ConfirmPairing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="281" column="80" selection-start-line="281" selection-start-column="80" selection-end-line="281" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -1861,7 +1890,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/FetchDisconnectTrackers.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/ConnectActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/GPSTracker.java" />
-        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/AuthenticationActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/BKSigninActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/Manual.java" />
@@ -1870,6 +1898,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/ConfirmPairing.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/LoginActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/PromptDiscActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/AuthenticationActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -1904,7 +1934,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2027,7 +2061,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bkapp" />
+              <option name="myItemId" value="bktelematics" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2047,11 +2081,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2406,29 +2436,31 @@
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36129034" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.50278884" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43709677" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36129034" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.50278884" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43709677" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20483871" sideWeight="0.49721116" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879817" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20483871" sideWeight="0.49721116" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20796813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20796813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2596774" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2436,8 +2468,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879817" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2596774" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2490,56 +2520,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_bksignin.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_compliance.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_confirm_pairing.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_disconnect_tracker.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_insert_tracker.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -2630,16 +2610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/toolbar_layout.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_manual.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -2655,37 +2625,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-xhdpi/mac_logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-xhdpi/tracker_image.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/drawable-mdpi/BlackKnight_Development_Mockups_V1 (1).jpg" />
-    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-mdpi/imageedit_1_7939705852.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2716,63 +2660,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/Compliance.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/Compliance.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1513">
           <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/CustomDialog.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/CustomDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-311">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/CustomListAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/CustomListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/Encryptor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/Encryptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1278">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/FetchDisconnectTrackers.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/FetchDisconnectTrackers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="936">
           <caret line="133" column="2" selection-start-line="133" selection-start-column="2" selection-end-line="133" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/GPSTracker.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/GPSTracker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="733">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/InsertTracker.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/InsertTracker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1625">
           <caret line="154" column="16" selection-start-line="154" selection-start-column="16" selection-end-line="156" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/SignupActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/SignupActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/SplashActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/SplashActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
@@ -2793,41 +2737,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/ScanTracker.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/ScanTracker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
           <caret line="135" column="13" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/ScanVIN.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/ScanVIN.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="972">
           <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/DisconnectTracker.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/DisconnectTracker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/DisconnectActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/DisconnectActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1332">
           <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1998">
           <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2838,76 +2779,131 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1044">
           <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/AuthenticationActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1422">
-          <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/BKSigninActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/BKSigninActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1962">
           <caret line="158" column="29" selection-start-line="158" selection-start-column="29" selection-end-line="158" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/Manual.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/Manual.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1656">
           <caret line="107" column="43" selection-start-line="107" selection-start-column="43" selection-end-line="107" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/ConnectActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/ConnectActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="2412">
           <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-xhdpi/bk.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-xhdpi/bk01.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-xhdpi/compliance.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-mdpi/imageedit_1_7939705852.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-xhdpi/mac_logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-mdpi/profile.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-xhdpi/splash.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-xhdpi/tracker_image.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/toolbar_layout.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/ConfirmPairing.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/ConfirmPairing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-649">
-          <caret line="285" column="80" selection-start-line="285" selection-start-column="80" selection-end-line="285" selection-end-column="80" />
+        <state relative-caret-position="284">
+          <caret line="281" column="80" selection-start-line="281" selection-start-column="80" selection-end-line="281" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/PromptDiscActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="292" column="80" selection-start-line="292" selection-start-column="80" selection-end-line="292" selection-end-column="80" />
           <folding>
-            <element signature="e#3703#3728#0" expanded="true" />
-            <marker date="1483556980383" expanded="false" signature="3770:3797" ph="&quot;d&quot;" />
+            <marker date="1484159180813" expanded="false" signature="3727:3752" ph="&quot;c&quot;" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/LoginActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-869">
-          <caret line="246" column="10" selection-start-line="246" selection-start-column="10" selection-end-line="246" selection-end-column="10" />
+        <state relative-caret-position="392">
+          <caret line="186" column="62" selection-start-line="186" selection-start-column="62" selection-end-line="186" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/Message.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-703">
-          <caret line="189" column="62" selection-start-line="189" selection-start-column="62" selection-end-line="189" selection-end-column="62" />
+        <state relative-caret-position="414">
+          <caret line="227" column="10" selection-start-line="227" selection-start-column="10" selection-end-line="227" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bkapp/PromptDiscActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-738">
-          <caret line="294" column="80" selection-start-line="294" selection-start-column="80" selection-end-line="294" selection-end-column="80" />
-          <folding>
-            <marker date="1483557024199" expanded="false" signature="3830:3855" ph="&quot;c&quot;" />
-          </folding>
+        <state relative-caret-position="36">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/malki/bktelematics/AuthenticationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
