@@ -195,7 +195,8 @@ public class FetchDisconnectTrackers extends Service {
                 HttpResponse response = httpclient.execute(httppost);
                 String responseStr = EntityUtils.toString(response.getEntity());
 
-
+                httppost.releaseConnection();
+                httpclient.getConnectionManager().shutdown();
 
                 Log.i("Response: ", responseStr);
                 //handleResponse(responseStr);

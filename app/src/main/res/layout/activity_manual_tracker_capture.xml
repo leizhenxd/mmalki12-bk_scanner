@@ -51,10 +51,12 @@
         />
 
     <ImageView
-        android:layout_width="280dp"
-        android:layout_height="200dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
         android:src="@drawable/tracker_image"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="28dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
         android:id="@+id/imageView17"
         android:layout_below="@+id/textView55"
         android:layout_centerHorizontal="true" />

@@ -389,7 +389,8 @@ public class ScanTracker extends Activity {
                 HttpResponse response = httpclient.execute(httppost);
                 String responseStr = EntityUtils.toString(response.getEntity());
 
-
+                httppost.releaseConnection();
+                httpclient.getConnectionManager().shutdown();
 
 
                 handleResponse(responseStr);

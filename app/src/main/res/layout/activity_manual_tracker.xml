@@ -95,11 +95,10 @@
         android:backgroundTint="@color/colorWhite"
         android:textColorHint="@color/colorHint"
         android:fontFamily="monospace"
-        android:hint="Re-enter ID"
-        android:id="@+id/editText13"
-        android:layout_below="@+id/editText12"
-        android:layout_alignLeft="@+id/editText12"
-        android:layout_alignStart="@+id/editText12"
+        android:hint="Enter 10-digit ID"
+        android:id="@+id/editText12"
+        android:layout_below="@+id/imageView12"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp" />
 
     <EditText
@@ -111,10 +110,11 @@
         android:backgroundTint="@color/colorWhite"
         android:textColorHint="@color/colorHint"
         android:fontFamily="monospace"
-        android:hint="Enter 10-digit ID"
-        android:id="@+id/editText12"
-        android:layout_below="@+id/imageView12"
-        android:layout_centerHorizontal="true"
+        android:hint="Re-enter ID"
+        android:id="@+id/editText13"
+        android:layout_below="@+id/editText12"
+        android:layout_alignLeft="@+id/editText12"
+        android:layout_alignStart="@+id/editText12"
         android:layout_marginTop="14dp" />
 
 </RelativeLayout>

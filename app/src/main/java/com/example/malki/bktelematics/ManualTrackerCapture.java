@@ -6,7 +6,9 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -59,10 +61,18 @@ public class ManualTrackerCapture extends Activity {
                 intentCompliance();
             }
             else {
-                Intent connect = new Intent(ManualTrackerCapture.this, InsertTracker.class);
-                connect.putExtra("fromConnect", fromConnect);
-                connect.putExtra("trackerID", trackerID);
-                ManualTrackerCapture.this.startActivity(connect);
+                if(fromConnect) {
+                    Intent connect = new Intent(ManualTrackerCapture.this, InsertTracker.class);
+                    connect.putExtra("fromConnect", fromConnect);
+                    connect.putExtra("trackerID", trackerID);
+                    ManualTrackerCapture.this.startActivity(connect);
+                }
+                else {
+                    Intent connect = new Intent(ManualTrackerCapture.this, CaptureMessage.class);
+                    connect.putExtra("fromConnect", fromConnect);
+                    connect.putExtra("trackerID", trackerID);
+                    ManualTrackerCapture.this.startActivity(connect);
+                }
             }
         }
     };
@@ -91,6 +101,13 @@ public class ManualTrackerCapture extends Activity {
 
             ImagePathCache.picturePath = "";
             ImagePathCache.manualPictrueBase64 = encoded;
+
+            this.image.setImageBitmap(image);
+            ViewGroup.LayoutParams layoutParams = this.image.getLayoutParams();
+            Log.i("####width", layoutParams.width+"");
+            Log.i("####width", layoutParams.height+"");
+            layoutParams.width += 50;
+            this.image.setLayoutParams(layoutParams);
 
             button.setText("CONFIRM");
         }

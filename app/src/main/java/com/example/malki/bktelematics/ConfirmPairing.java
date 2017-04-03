@@ -242,15 +242,15 @@ public class ConfirmPairing extends Activity {
                     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm, yyyy/MM/dd");
                     time = sdf.format(cal.getTime());
 
-                    gps = new GPSTracker(ConfirmPairing.this);
-
-                    if (gps.canGetLocation()) {
-                        lat = gps.getLatitude();
-                        lon = gps.getLongitude();
-                    } else {
-                        gps.showSettingsAlert();
-                        Toast.makeText(getApplicationContext(), "Could not find location", Toast.LENGTH_SHORT).show();
-                    }
+//                    gps = new GPSTracker(ConfirmPairing.this);
+//
+//                    if (gps.canGetLocation()) {
+//                        lat = gps.getLatitude();
+//                        lon = gps.getLongitude();
+//                    } else {
+//                        gps.showSettingsAlert();
+//                        Toast.makeText(getApplicationContext(), "Could not find location", Toast.LENGTH_SHORT).show();
+//                    }
 
 
                     new MyAsyncTask().execute(trackerID, VIN);
@@ -367,17 +367,19 @@ public class ConfirmPairing extends Activity {
                 nameValuePairs.add(new BasicNameValuePair("sn", sn));
                 nameValuePairs.add(new BasicNameValuePair("vinfull", vinfull));
                 nameValuePairs.add(new BasicNameValuePair("pic", ImagePathCache.getPicBase64()));
-                if("".equals(ImagePathCache.manualPictrueBase64)) {
-                    nameValuePairs.add(new BasicNameValuePair("pic", ImagePathCache.getPicBase64()));
-                }
-                else {
+                if("".equals(ImagePathCache.picturePath)) {
+                    Log.i("###pic size", ImagePathCache.manualPictrueBase64.length()/1000 + "");
                     nameValuePairs.add(new BasicNameValuePair("pic", ImagePathCache.manualPictrueBase64));
                 }
-                if("".equals(ImagePathCache.manuaVinlPictrueBase64)) {
-                    nameValuePairs.add(new BasicNameValuePair("vinpic", ImagePathCache.getVinPicBase64()));
+                else {
+                    nameValuePairs.add(new BasicNameValuePair("pic", ImagePathCache.getPicBase64()));
+                }
+                if("".equals(ImagePathCache.vinPicturePath)) {
+                    Log.i("###vinpic size", ImagePathCache.manuaVinPictrueBase64.length()/1000 + "");
+                    nameValuePairs.add(new BasicNameValuePair("vinpic", ImagePathCache.manuaVinPictrueBase64));
                 }
                 else {
-                    nameValuePairs.add(new BasicNameValuePair("vinpic", ImagePathCache.manuaVinlPictrueBase64));
+                    nameValuePairs.add(new BasicNameValuePair("vinpic", ImagePathCache.getVinPicBase64()));
                 }
                 nameValuePairs.add(new BasicNameValuePair("vinpic", ImagePathCache.getVinPicBase64()));
                 nameValuePairs.add(new BasicNameValuePair("firstName", firstName));
@@ -399,9 +401,10 @@ public class ConfirmPairing extends Activity {
                 httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
                 // Execute HTTP Post Request
+                Log.i("###", "begin post");
                 HttpResponse response = httpclient.execute(httppost);
                 String responseStr = EntityUtils.toString(response.getEntity());
-
+                Log.i("###", responseStr);
                 httppost.releaseConnection();
                 httppost.getEntity().consumeContent();
                 httpclient.getConnectionManager().shutdown();

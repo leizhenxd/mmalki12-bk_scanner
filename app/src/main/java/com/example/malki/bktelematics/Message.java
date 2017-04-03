@@ -266,7 +266,9 @@ public class Message extends Activity {
                 HttpResponse response = httpclient.execute(httppost);
                 String responseStr = EntityUtils.toString(response.getEntity());
 
-
+                httppost.releaseConnection();
+                httppost.getEntity().consumeContent();
+                httpclient.getConnectionManager().shutdown();
 
 
                 handleResponse(responseStr);

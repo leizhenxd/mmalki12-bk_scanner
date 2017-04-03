@@ -127,21 +127,25 @@ public class ManualTracker extends Activity {
             {
                 if(tracker.getText().toString().equals(confirmtracker.getText().toString()) && tracker.getText().toString().length() == 10)
                 {
-                    if(fromConnect)
-                    {
-                        Intent connect = new Intent(ManualTracker.this, InsertTracker.class);
+//                    if(fromConnect)
+//                    {
+//                        Intent connect = new Intent(ManualTracker.this, InsertTracker.class);
+//                        connect.putExtra("fromConnect", fromConnect);
+//                        connect.putExtra("trackerID", tracker.getText().toString());
+//                        ManualTracker.this.startActivity(connect);
+                        Intent connect = new Intent(ManualTracker.this, ManualTrackerCapture.class);
                         connect.putExtra("fromConnect", fromConnect);
                         connect.putExtra("trackerID", tracker.getText().toString());
                         ManualTracker.this.startActivity(connect);
-                    }
-
-                    else
-                    {
-                        Intent connect = new Intent(ManualTracker.this, CaptureMessage.class);
-                        connect.putExtra("fromConnect", fromConnect);
-                        connect.putExtra("trackerID", tracker.getText().toString());
-                        ManualTracker.this.startActivity(connect);
-                    }
+//                    }
+//
+//                    else
+//                    {
+//                        Intent connect = new Intent(ManualTracker.this, CaptureMessage.class);
+//                        connect.putExtra("fromConnect", fromConnect);
+//                        connect.putExtra("trackerID", tracker.getText().toString());
+//                        ManualTracker.this.startActivity(connect);
+//                    }
 
 
                 }
