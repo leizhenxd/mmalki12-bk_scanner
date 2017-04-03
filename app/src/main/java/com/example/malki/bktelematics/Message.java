@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.malki.bktelematics.utils.ImagePathCache;
 import com.example.malki.telematics.R;
 
 import java.io.IOException;
@@ -31,6 +32,7 @@ import cz.msebera.android.httpclient.HttpResponse;
 import cz.msebera.android.httpclient.NameValuePair;
 import cz.msebera.android.httpclient.client.ClientProtocolException;
 import cz.msebera.android.httpclient.client.HttpClient;
+import cz.msebera.android.httpclient.client.entity.UrlEncodedFormEntity;
 import cz.msebera.android.httpclient.client.methods.HttpPost;
 import cz.msebera.android.httpclient.impl.client.DefaultHttpClient;
 import cz.msebera.android.httpclient.message.BasicNameValuePair;
@@ -182,9 +184,6 @@ public class Message extends Activity {
                 }
 
                 new MyAsyncTask().execute(trackerID, textvalue);
-                Intent connect = new Intent(Message.this, MainActivity.class);
-                Message.this.startActivity(connect);
-
             }
 
             else if (view == no)
@@ -229,6 +228,8 @@ public class Message extends Activity {
 //            Toast.makeText(getApplicationContext(), "command sent", Toast.LENGTH_LONG).show();
 
             dialog.dismiss();
+            Intent connect = new Intent(Message.this, MainActivity.class);
+            Message.this.startActivity(connect);
             super.onPostExecute(result);
         }
         protected void onProgressUpdate(Integer... progress){
@@ -255,19 +256,35 @@ public class Message extends Activity {
                 nameValuePairs.add(new BasicNameValuePair("lat", Double.toString(lat)));
                 nameValuePairs.add(new BasicNameValuePair("lng", Double.toString(lon)));
                 nameValuePairs.add(new BasicNameValuePair("date", time));
-
+                if("".equals(ImagePathCache.picturePath)) {
+                    Log.i("###pic size", ImagePathCache.manualPictrueBase64.length()/1000 + "");
+                    nameValuePairs.add(new BasicNameValuePair("pic", ImagePathCache.manualPictrueBase64));
+                }
+                else {
+                    nameValuePairs.add(new BasicNameValuePair("pic", ImagePathCache.getPicBase64()));
+                }
+                if("".equals(ImagePathCache.vinPicturePath)) {
+                    Log.i("###vinpic size", ImagePathCache.manuaVinPictrueBase64.length()/1000 + "");
+                    nameValuePairs.add(new BasicNameValuePair("vinPic", ImagePathCache.manuaVinPictrueBase64));
+                }
+                else {
+                    nameValuePairs.add(new BasicNameValuePair("vinPic", ImagePathCache.getVinPicBase64()));
+                }
 
 //                httppost.addHeader("username", uName);
 //                httppost.addHeader("password", pWord);
                 httppost.addHeader("Authorization", autho);
                 httppost.addHeader("ivector", iVector);
 
+                httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
                 // Execute HTTP Post Request
+                Log.i("###", "begin disconnect post");
                 HttpResponse response = httpclient.execute(httppost);
                 String responseStr = EntityUtils.toString(response.getEntity());
+                Log.i("###response", responseStr);
 
                 httppost.releaseConnection();
-                httppost.getEntity().consumeContent();
                 httpclient.getConnectionManager().shutdown();
 
 

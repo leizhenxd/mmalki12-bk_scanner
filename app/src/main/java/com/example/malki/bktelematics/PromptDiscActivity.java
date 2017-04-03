@@ -97,8 +97,7 @@ public class PromptDiscActivity extends Activity {
         fontButton = Typeface.createFromAsset(getAssets(), "EngschriftDIND.otf");
 
         Bundle extras = getIntent().getExtras();
-        if (extras != null)
-        {
+        if (extras != null) {
             trackerID = extras.getString("trackerID");
             VIN = extras.getString("VIN");
             reason = extras.getString("reason");
@@ -116,7 +115,7 @@ public class PromptDiscActivity extends Activity {
 
         pref = getSharedPreferences("myfile", 0);
 
-        String [] args;
+        String[] args;
         args = new Encryptor().encryptString("AnnlynMotors", "12345678");
 
         autho = args[0];
@@ -129,22 +128,15 @@ public class PromptDiscActivity extends Activity {
         mobileNumber = pref.getString(getString(R.string.last_name), null);
 
 
-
-
-
         other.setHint("Please type reason");
         reasonString = populateview();
 
-        if (reasonString == null)
-        {
+        if (reasonString == null) {
             text.setText("Please enter OTHER reason for your disconnection.");
 
             reason = other.getText().toString();
 
-        }
-
-        else
-        {
+        } else {
             other.setVisibility(View.INVISIBLE);
             text.setText(MSG + reasonString + MSG2);
         }
@@ -169,7 +161,7 @@ public class PromptDiscActivity extends Activity {
         hamburger = (ImageView) this.findViewById(R.id.list);
         hamburger.setOnClickListener(handler);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerList = (ListView)findViewById(R.id.navList);
+        mDrawerList = (ListView) findViewById(R.id.navList);
         addDrawerItems();
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -179,8 +171,7 @@ public class PromptDiscActivity extends Activity {
                 String itemPressed = ((TextView) view).getText().toString();
 
                 Intent connect = new Intent(PromptDiscActivity.this, PromptDiscActivity.class);
-                switch(itemPressed)
-                {
+                switch (itemPressed) {
                     case "HOME":
                         connect = new Intent(PromptDiscActivity.this, MainActivity.class);
                         break;
@@ -210,104 +201,74 @@ public class PromptDiscActivity extends Activity {
     }
 
     private void addDrawerItems() {
-        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "HELP" };
+        String[] osArray = {"HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "HELP"};
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
     }
 
-    View.OnClickListener handler = new View.OnClickListener(){
-        public void onClick(View v)
-        {
-            if(v == confirm)
-            {
+    View.OnClickListener handler = new View.OnClickListener() {
+        public void onClick(View v) {
+            if (v == confirm) {
 
 
-
-
-                if (reasonString == null)
-                {
+                if (reasonString == null) {
                     Intent connect = new Intent(PromptDiscActivity.this, Message.class);
                     connect.putExtra("trackerID", trackerID);
                     connect.putExtra("VIN", VIN);
                     String realReason = "\"" + other.getText().toString() + "\"";
                     connect.putExtra("text", realReason);
                     PromptDiscActivity.this.startActivity(connect);
-                }
-
-                else
-                {
+                } else {
                     reason = other.getText().toString();
 
                     Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("GMT+11:00"));
                     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm, yyyy/MM/dd");
                     time = sdf.format(cal.getTime());
 
-                    gps = new GPSTracker(PromptDiscActivity.this);
+//                    gps = new GPSTracker(PromptDiscActivity.this);
+//
+//                    if(gps.canGetLocation())
+//                    {
+//                        lat = gps.getLatitude();
+//                        lon = gps.getLongitude();
+//                    }
+//
+//                    else
+//                    {
+//                        gps.showSettingsAlert();
+//                        Toast.makeText(getApplicationContext(), "Could not find location", Toast.LENGTH_SHORT).show();
+//                    }
 
-                    if(gps.canGetLocation())
-                    {
-                        lat = gps.getLatitude();
-                        lon = gps.getLongitude();
-                    }
 
-                    else
-                    {
-                        gps.showSettingsAlert();
-                        Toast.makeText(getApplicationContext(), "Could not find location", Toast.LENGTH_SHORT).show();
-                    }
-
-
-                    new MyAsyncTask().execute(trackerID, reason);
+//                    new MyAsyncTask().execute(trackerID, reason);
                     Intent connect = new Intent(PromptDiscActivity.this, MainActivity.class);
                     PromptDiscActivity.this.startActivity(connect);
                 }
-            }
-
-            else if (v == cancel)
-            {
+            } else if (v == cancel) {
                 Intent connect = new Intent(PromptDiscActivity.this, DisconnectActivity.class);
                 connect.putExtra("trackerID", trackerID);
                 connect.putExtra("VIN", VIN);
                 PromptDiscActivity.this.startActivity(connect);
-            }
-
-            else if(v == bkhome)
-            {
+            } else if (v == bkhome) {
                 Intent connect = new Intent(PromptDiscActivity.this, MainActivity.class);
                 PromptDiscActivity.this.startActivity(connect);
-            }
-
-            else if(v == hamburger)
-            {
+            } else if (v == hamburger) {
 
                 drawer.openDrawer(mDrawerList);
             }
         }
     };
 
-    public String populateview()
-    {
-        if (reason.equals("Sale"))
-        {
+    public String populateview() {
+        if (reason.equals("Sale")) {
             return "has been SOLD.";
-        }
-
-        else if (reason.equals("Service"))
-        {
+        } else if (reason.equals("Service")) {
             return "is being moved to SERVICE.";
-        }
-
-        else if (reason.equals("Pre-Delivery"))
-        {
+        } else if (reason.equals("Pre-Delivery")) {
             return "is being moved to PRE-DELIVERY.";
-        }
-
-        else if(reason.equals("Dealership Exchange"))
-        {
+        } else if (reason.equals("Dealership Exchange")) {
             return "is being EXCHANGED with a vehicle from another dealership.";
-        }
-
-        else
+        } else
             return null;
     }
 
@@ -315,8 +276,7 @@ public class PromptDiscActivity extends Activity {
         ProgressDialog dialog = new ProgressDialog(PromptDiscActivity.this);
 
         @Override
-        protected void onPreExecute()
-        {
+        protected void onPreExecute() {
             dialog.setMessage("Disconnecting  " + trackerID);
             dialog.show();
             super.onPreExecute();
@@ -330,17 +290,17 @@ public class PromptDiscActivity extends Activity {
             return null;
         }
 
-        protected void onPostExecute(Double result){
+        protected void onPostExecute(Double result) {
 //            pb.setVisibility(View.GONE);
 //            Toast.makeText(getApplicationContext(), "command sent", Toast.LENGTH_LONG).show();
 
             dialog.dismiss();
             super.onPostExecute(result);
         }
-        protected void onProgressUpdate(Integer... progress){
+
+        protected void onProgressUpdate(Integer... progress) {
             //pb.setProgress(progress[0]);
             dialog.dismiss();
-
 
 
         }
@@ -365,7 +325,6 @@ public class PromptDiscActivity extends Activity {
                 nameValuePairs.add(new BasicNameValuePair("vinpic", ImagePathCache.getVinPicBase64()));
 
 
-
 //                httppost.addHeader("username", uName);
 //                httppost.addHeader("password", pWord);
                 httppost.addHeader("Authorization", autho);
@@ -373,15 +332,15 @@ public class PromptDiscActivity extends Activity {
 
                 // Execute HTTP Post Request
                 httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+                Log.i("###", "begin disconnect post");
                 HttpResponse response = httpclient.execute(httppost);
                 String responseStr = EntityUtils.toString(response.getEntity());
-
+                Log.i("###response", responseStr);
                 httppost.releaseConnection();
-                httppost.getEntity().consumeContent();
+                EntityUtils.consume(httppost.getEntity());
                 httpclient.getConnectionManager().shutdown();
 
                 handleResponse(responseStr);
-
 
 
             } catch (ClientProtocolException e) {
@@ -392,9 +351,7 @@ public class PromptDiscActivity extends Activity {
                 // TODO Auto-generated catch block
                 Log.i("IO Exception", e.toString());
                 //doNotification();
-            }
-            catch (RuntimeException e)
-            {
+            } catch (RuntimeException e) {
                 Log.i("Runtime Exception", e.toString());
                 //doNotification();
 //                text = "Incorrect Username and/or Password";
@@ -405,18 +362,12 @@ public class PromptDiscActivity extends Activity {
 
     }
 
-    public void handleResponse(String str)
-    {
+    public void handleResponse(String str) {
         String txt = "Thanks " + VIN + "status successfully updated";
         //CALL FROM MAIN THREAD FIRST!!
         //Toast.makeText(this, txt, Toast.LENGTH_LONG).show();
         Log.i("PromptDis Response", str);
     }
-
-
-
-
-
 
 
 }
