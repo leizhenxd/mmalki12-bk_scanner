@@ -26,7 +26,6 @@ public class Manual extends Activity {
 
     private String trackerID;
     private Boolean fromConnect;
-    private TextView text;
     private ImageView view;
     private TextView text2;
     private Button button;
@@ -34,6 +33,8 @@ public class Manual extends Activity {
     private Typeface fontButton;
     private ImageView bkhome;
     private Typeface fontText;
+
+    private String manualVin;
 
     private byte [] pic;
 
@@ -57,16 +58,15 @@ public class Manual extends Activity {
         {
             trackerID = extras.getString("trackerID");
             fromConnect = extras.getBoolean("fromConnect");
+            manualVin = extras.getString("VIN");
         }
 
         text2 = (TextView) this.findViewById(R.id.textView39);
         bkhome = (ImageView) this.findViewById(R.id.bkhome);
-        text = (TextView) this.findViewById(R.id.textView11);
         button = (Button) this.findViewById(R.id.button6);
         view = (ImageView) this.findViewById(R.id.imageView);
 
        // text.setText(MESSAGE);
-        text.setTypeface(fontText);
         button.setTypeface(fontButton);
         text2.setTypeface(fontText);
 
@@ -104,6 +104,9 @@ public class Manual extends Activity {
                     case "ACTIVITY":
                         connect = new Intent(Manual.this, ActivityLog.class);
                         break;
+                    case "CHANGE PIN":
+                        connect = new Intent(Manual.this, ResetPINActivity.class);
+                        break;
                     case "HELP":
                         connect = new Intent(Manual.this, Help.class);
                         connect.putExtra("verified", true);
@@ -114,11 +117,11 @@ public class Manual extends Activity {
             }
         });
 
-
+        text2.setText("Use the camera to capture a photo of the full Compliance Plate for vehicle with VIN ending " + manualVin);
     }
 
     private void addDrawerItems() {
-        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "HELP" };
+        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "CHANGE PIN", "HELP" };
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
     }
@@ -169,25 +172,33 @@ public class Manual extends Activity {
             String encoded = Base64.encodeToString(pic, Base64.DEFAULT);
             //view.setImageBitmap(image);
 
-            Intent connect = new Intent(Manual.this, Compliance.class);
-            connect.putExtra("trackerID", trackerID);
+
 
             ImagePathCache.vinPicturePath = "";
             ImagePathCache.manuaVinPictrueBase64 = encoded;
 
-
+            Toast.makeText(getApplicationContext(), "Success - Compliance plate image captured", Toast.LENGTH_SHORT).show();
             if(fromConnect){
+                Intent connect = new Intent(Manual.this, ConfirmPairing.class);
+                connect.putExtra("trackerID", trackerID);
                 connect.putExtra("fromConnect", true);
-
+                connect.putExtra("VIN", manualVin);
+                connect.putExtra("manual", true);
+                Manual.this.startActivity(connect);
             }
 
             else if (!fromConnect)
             {
+                Intent connect = new Intent(Manual.this, DisconnectActivity.class);
+                connect.putExtra("trackerID", trackerID);
                 connect.putExtra("fromConnect", false);
+                connect.putExtra("VIN", manualVin);
+                connect.putExtra("manual", true);
+                Manual.this.startActivity(connect);
 
             }
-            Toast.makeText(getApplicationContext(), "Success - Compliance plate image captured", Toast.LENGTH_SHORT).show();
-            Manual.this.startActivity(connect);
+
+
         }
 
 

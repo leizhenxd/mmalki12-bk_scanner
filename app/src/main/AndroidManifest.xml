@@ -5,12 +5,18 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Telematics"
         android:theme="@style/AppTheme">
+        <activity android:name="com.example.malki.bktelematics.ResetPINActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
         <activity
             android:name="com.example.malki.bktelematics.SplashActivity"
             android:screenOrientation="portrait">
@@ -58,7 +64,10 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.example.malki.bktelematics.ConfirmPairing"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" >
+        </activity>
+
+
         <activity
             android:name="com.example.malki.bktelematics.DisconnectTracker"
             android:screenOrientation="portrait" />
@@ -77,7 +86,8 @@
         <activity android:name="com.example.malki.bktelematics.ManualTracker" />
         <activity android:name="com.example.malki.bktelematics.ActivityLog" />
         <activity android:name="com.example.malki.bktelematics.Help" />
-        <activity android:name="com.example.malki.bktelematics.ManualTrackerCapture"></activity>
+        <activity android:name="com.example.malki.bktelematics.ManualTrackerCapture" />
+
     </application>
 
 </manifest>

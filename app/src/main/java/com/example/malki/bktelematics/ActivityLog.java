@@ -142,6 +142,9 @@ public class ActivityLog extends Activity implements customButtonListener{
                     case "ACTIVITY":
                         connect = new Intent(ActivityLog.this, ActivityLog.class);
                         break;
+                    case "CHANGE PIN":
+                        connect = new Intent(ActivityLog.this, ResetPINActivity.class);
+                        break;
                     case "HELP":
                         connect = new Intent(ActivityLog.this, Help.class);
                         connect.putExtra("verified", true);
@@ -169,7 +172,7 @@ public class ActivityLog extends Activity implements customButtonListener{
 
 
     private void addDrawerItems() {
-        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "HELP" };
+        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY","CHANGE PIN", "HELP" };
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
     }

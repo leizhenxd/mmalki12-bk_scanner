@@ -129,6 +129,9 @@ public class ConnectActivity extends Activity{
                     case "ACTIVITY":
                         connect = new Intent(ConnectActivity.this, ActivityLog.class);
                         break;
+                    case "CHANGE PIN":
+                        connect = new Intent(ConnectActivity.this, ResetPINActivity.class);
+                        break;
                     case "HELP":
                         connect = new Intent(ConnectActivity.this, Help.class);
                         connect.putExtra("verified", true);
@@ -143,7 +146,7 @@ public class ConnectActivity extends Activity{
     }
 
     private void addDrawerItems() {
-        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "HELP" };
+        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "CHANGE PIN", "HELP" };
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
     }

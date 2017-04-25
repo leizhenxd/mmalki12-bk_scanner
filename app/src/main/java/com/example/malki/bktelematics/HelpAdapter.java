@@ -2,6 +2,7 @@ package com.example.malki.bktelematics;
 
 
 import android.content.Context;
+import android.graphics.Color;
 import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -80,24 +81,16 @@ public class HelpAdapter extends ArrayAdapter<String[]>
             //if(viewHolder.arrow != null)
                 viewHolder.arrow.setTag(0);
 
-
-            if(items.get(position)[1].isEmpty())
-            {
+            Log.i("###tag", items.get(position)[0]);
+            if(items.get(position)[1].isEmpty()) {
                 viewHolder.arrow.setEnabled(false);
                 viewHolder.arrow.setVisibility(View.INVISIBLE);
-
-
             }
-
-            else
-            {
-
+            else {
                 viewHolder.drop.setText(items.get(position)[1]);
                 viewHolder.arrow.setImageResource(R.drawable.ic_expand);
                 viewHolder.arrow.setVisibility(View.VISIBLE);
                 viewHolder.arrow.setEnabled(true);
-
-
             }
 
             viewHolder.drop.setVisibility(View.GONE);

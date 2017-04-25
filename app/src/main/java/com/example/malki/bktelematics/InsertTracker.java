@@ -43,8 +43,7 @@ public class InsertTracker extends Activity {
     private TextView textView;
     private NotificationManager mnotification;
 
-    private String FIRST_HALF = "Tracker ";
-    private String SECOND_HALF = " successfully captured.";
+    private String FIRST_HALF = "Thanks for scanning\n tracker ";
 
     private Notification.Builder builder;
     private Typeface fontText;
@@ -94,7 +93,7 @@ public class InsertTracker extends Activity {
 
         bkhome.setOnClickListener(handler);
 
-        textView.setText(FIRST_HALF + trackerID + SECOND_HALF);
+        textView.setText(FIRST_HALF + trackerID);
 
         button.setOnClickListener(handler);
 
@@ -129,6 +128,9 @@ public class InsertTracker extends Activity {
                     case "ACTIVITY":
                         connect = new Intent(InsertTracker.this, ActivityLog.class);
                         break;
+                    case "CHANGE PIN":
+                        connect = new Intent(InsertTracker.this, ResetPINActivity.class);
+                        break;
                     case "HELP":
                         connect = new Intent(InsertTracker.this, Help.class);
                         connect.putExtra("verified", true);
@@ -141,7 +143,7 @@ public class InsertTracker extends Activity {
     }
 
     private void addDrawerItems() {
-        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "HELP" };
+        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "CHANGE PIN", "HELP" };
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
     }
@@ -166,16 +168,19 @@ public class InsertTracker extends Activity {
                 //MAKE API CALL TO CHECK TRACKER HAS BEEN INSERTED
 
 
-                Intent connect = new Intent(InsertTracker.this, CaptureMessage.class);
+//                Intent connect = new Intent(InsertTracker.this, CaptureMessage.class);
+//                connect.putExtra("trackerID", trackerID);
+//                connect.putExtra("fromConnect", true);
+//                connect.putExtra("display1", "Black Knight ID ");
+//                connect.putExtra("display2", " connected. Please scan the VIN barcode");
+//                InsertTracker.this.startActivity(connect);
+
+                Intent connect = new Intent(InsertTracker.this, ScanVIN.class);
                 connect.putExtra("trackerID", trackerID);
                 connect.putExtra("fromConnect", true);
                 connect.putExtra("display1", "Black Knight ID ");
                 connect.putExtra("display2", " connected. Please scan the VIN barcode");
                 InsertTracker.this.startActivity(connect);
-
-
-
-
 
             }
 

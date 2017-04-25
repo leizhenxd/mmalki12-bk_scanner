@@ -74,8 +74,8 @@ public class ConfirmPairing extends Activity {
     private String url = "https://www.bk-gts.com/telematics/vehicles/pairing";
 
     private TextView text2;
-    private TextView text3;
     private TextView text;
+    private TextView loadingText;
     private Boolean confirmed;
     private ImageView bkhome;
 
@@ -133,22 +133,20 @@ public class ConfirmPairing extends Activity {
         bkhome = (ImageView) this.findViewById(R.id.bkhome);
         text = (TextView) this.findViewById(R.id.textView13);
         text2 = (TextView) this.findViewById(R.id.textView33);
-        text3 = (TextView) this.findViewById(R.id.textView34);
+        loadingText = (TextView) this.findViewById(R.id.loadingText);
         animation = (ImageView) this.findViewById(R.id.imageView10);
         animation.setBackgroundResource(R.drawable.pairinganimation);
         ani = (AnimationDrawable) animation.getBackground();
 
         //text.setText(MSG1 + trackerID + MSG2 + ending + VIN );
 
-        text2.setText("You're pairing ID " + trackerID + " with vehicle VIN " + ending + VIN);
-        text3.setText("Please confirm this is correct and that tracker " + trackerID + " has been inserted");
+        text2.setText("Tracker " + trackerID + "\n with \n Vehicle " + VIN);
 
 
         yes = (Button) this.findViewById(R.id.button8);
         //no = (Button) this.findViewById(R.id.button9);
 
         text2.setTypeface(fontText);
-        text3.setTypeface(fontText);
         text.setTypeface(fontText);
         yes.setTypeface(fontButton);
         //no.setTypeface(fontButton);
@@ -156,18 +154,6 @@ public class ConfirmPairing extends Activity {
         yes.setOnClickListener(handler);
         //no.setOnClickListener(handler);
         bkhome.setOnClickListener(handler);
-
-        try {
-            if (ActivityCompat.checkSelfPermission(this, mPermission)
-                    != MockPackageManager.PERMISSION_GRANTED) {
-
-                ActivityCompat.requestPermissions(this, new String[]{mPermission},
-                        REQUEST_CODE_PERMISSION);
-
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
         ani.start();
 
@@ -202,6 +188,9 @@ public class ConfirmPairing extends Activity {
                     case "ACTIVITY":
                         connect = new Intent(ConfirmPairing.this, ActivityLog.class);
                         break;
+                    case "CHANGE PIN":
+                        connect = new Intent(ConfirmPairing.this, ResetPINActivity.class);
+                        break;
                     case "HELP":
                         connect = new Intent(ConfirmPairing.this, Help.class);
                         connect.putExtra("verified", true);
@@ -217,7 +206,7 @@ public class ConfirmPairing extends Activity {
 
 
     private void addDrawerItems() {
-        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "HELP" };
+        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "CHANGE PIN", "HELP" };
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
     }
@@ -235,7 +224,6 @@ public class ConfirmPairing extends Activity {
 
                 else {
 
-                    ani.stop();
                     //POST TO BLACK KNIGHT DB
 
                     Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("GMT+11:00"));
@@ -256,18 +244,9 @@ public class ConfirmPairing extends Activity {
                     new MyAsyncTask().execute(trackerID, VIN);
 
 
-                    String txt = "PAIRING COMPLETE! Black Knight ID " + trackerID + " has been successfully paired with VIN " + ending + VIN;
-                    confirmed = true;
 
-                    text.setText("SUCCESS");
-                    text2.setText("Pairing Complete");
 
-                    text3.setVisibility(View.INVISIBLE);
-                    animation.setImageResource(R.drawable.bkanimation01);
-
-                    yes.setText("HOME");
-
-                    Toast.makeText(v.getContext(), txt, Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(v.getContext(), txt, Toast.LENGTH_SHORT).show();
                     // Flash to SAY successfully paired ID and VIN
                 }
 
@@ -321,13 +300,12 @@ public class ConfirmPairing extends Activity {
     }
 
     private class MyAsyncTask extends AsyncTask<String, Integer, Double> {
-        ProgressDialog dialog = new CustomDialog(ConfirmPairing.this);
 
         @Override
         protected void onPreExecute()
         {
 //            dialog.setMessage("Verifying Black Knight credentials");
-            dialog.show();
+            loadingText.setVisibility(View.VISIBLE);
             super.onPreExecute();
         }
 
@@ -343,15 +321,23 @@ public class ConfirmPairing extends Activity {
 //            pb.setVisibility(View.GONE);
 //            Toast.makeText(getApplicationContext(), "command sent", Toast.LENGTH_LONG).show();
 
-            dialog.dismiss();
+            String txt = "PAIRING COMPLETE! Black Knight ID " + trackerID + " has been successfully paired with VIN " + ending + VIN;
+            confirmed = true;
+
+            text.setText("SUCCESS");
+            text2.setText("Pairing Complete");
+
+            animation.setImageResource(R.drawable.bkanimation01);
+
+            yes.setText("HOME");
+
+            loadingText.setVisibility(View.INVISIBLE);
+            ani.stop();
+            ani.selectDrawable(19);
             super.onPostExecute(result);
         }
         protected void onProgressUpdate(Integer... progress){
             //pb.setProgress(progress[0]);
-            dialog.dismiss();
-
-
-
         }
 
         public void postData(String sn, String vinfull) {

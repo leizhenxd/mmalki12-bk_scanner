@@ -22,7 +22,6 @@ public class ManualTracker extends Activity {
 
     private TextView text;
     private TextView text2;
-    private TextView text3;
 
     private EditText edittxt1;
     private EditText edittxt2;
@@ -57,7 +56,6 @@ public class ManualTracker extends Activity {
 
         text = (TextView) findViewById(R.id.textView41);
         text2 = (TextView) findViewById(R.id.textView42);
-        text3 = (TextView) findViewById(R.id.textView43);
 
         next = (Button) findViewById(R.id.button9);
         tracker = (EditText) findViewById(R.id.editText12);
@@ -65,7 +63,6 @@ public class ManualTracker extends Activity {
 
         text.setTypeface(textFont);
         text2.setTypeface(textFont);
-        text3.setTypeface(textFont);
         next.setTypeface(buttonFont);
 
         next.setOnClickListener(handler);
@@ -101,6 +98,9 @@ public class ManualTracker extends Activity {
                     case "ACTIVITY":
                         connect = new Intent(ManualTracker.this, ActivityLog.class);
                         break;
+                    case "CHANGE PIN":
+                        connect = new Intent(ManualTracker.this, ResetPINActivity.class);
+                        break;
                     case "HELP":
                         connect = new Intent(ManualTracker.this, Help.class);
                         connect.putExtra("verified", true);
@@ -114,7 +114,7 @@ public class ManualTracker extends Activity {
     }
 
     private void addDrawerItems() {
-        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "HELP" };
+        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "CHANGE PIN", "HELP" };
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
     }
@@ -127,27 +127,10 @@ public class ManualTracker extends Activity {
             {
                 if(tracker.getText().toString().equals(confirmtracker.getText().toString()) && tracker.getText().toString().length() == 10)
                 {
-//                    if(fromConnect)
-//                    {
-//                        Intent connect = new Intent(ManualTracker.this, InsertTracker.class);
-//                        connect.putExtra("fromConnect", fromConnect);
-//                        connect.putExtra("trackerID", tracker.getText().toString());
-//                        ManualTracker.this.startActivity(connect);
                         Intent connect = new Intent(ManualTracker.this, ManualTrackerCapture.class);
                         connect.putExtra("fromConnect", fromConnect);
                         connect.putExtra("trackerID", tracker.getText().toString());
                         ManualTracker.this.startActivity(connect);
-//                    }
-//
-//                    else
-//                    {
-//                        Intent connect = new Intent(ManualTracker.this, CaptureMessage.class);
-//                        connect.putExtra("fromConnect", fromConnect);
-//                        connect.putExtra("trackerID", tracker.getText().toString());
-//                        ManualTracker.this.startActivity(connect);
-//                    }
-
-
                 }
 
                 else

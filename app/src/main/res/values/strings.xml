@@ -29,7 +29,6 @@
     <string name="title_activity_capture_message">CaptureMessage</string>
 
     <string-array name="help_title_general">
-        <item>General Inquiries - 1300 302 199</item>
         <item>Black Knight Telematics overview</item>
         <item>Who can use Black Knight Telematics</item>
         <item>Reset forgotten 4-digit PIN</item>
@@ -38,7 +37,6 @@
     </string-array>
 
     <string-array name="help_body_general">
-        <item> </item>
         <item>Black Knight Telematics (BKT) is a professional wholesale vehicle management system combining state-of-the-art intelligent app technology with the Black Knight X3 GPS tracking device. A complete end-to-end solution for businesses with high-volume/high-turnover vehicle inventories, the BKT system:
             \n
             \n· instantly pairs (and unpairs) tracking devices with vehicles, in a simple 2-minute process
@@ -78,7 +76,6 @@
         <item>How a successful pairing can still show as INCOMPLETE</item>
         <item>Version/Update info</item>
         <item>Launch Black Knight tracking website (bk-gts.com)</item>
-        <item>General Inquiries - 1300 302 199</item>
     </string-array>
 
     <string-array name="help_body_verified">
@@ -115,7 +112,6 @@
         <item>to be completed</item>
         <item>Beta version 1.0 © 2017 Black Knight Telematics and NanoTag Technology Pty Ltd</item>
         <item>https://www.bk-gts.com</item>
-        <item> </item>
     </string-array>
 
 </resources>

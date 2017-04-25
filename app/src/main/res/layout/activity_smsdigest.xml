@@ -14,7 +14,7 @@
     <Button
         android:text="HOME"
         android:layout_width="wrap_content"
-        android:background="@color/colorBackground"
+        android:background="@android:color/transparent"
         android:stateListAnimator="@null"
         android:textColor="@color/colorButton"
         android:textSize="24sp"

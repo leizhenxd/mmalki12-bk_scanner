@@ -1,12 +1,17 @@
 package com.example.malki.bktelematics;
 
+import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.Image;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.test.mock.MockPackageManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -43,6 +48,8 @@ public class Landing extends Activity {
     private ImageView fourth;
     private String pin;
 
+    private int failTime = 0;
+
     private SharedPreferences pref;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +67,18 @@ public class Landing extends Activity {
 //            Intent connect = new Intent(Landing.this, BKSigninActivity.class);
 //            Landing.this.startActivity(connect);
 //        }
+
+        try {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                    != MockPackageManager.PERMISSION_GRANTED) {
+
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        2);
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         font = Typeface.createFromAsset(getAssets(), "GT-Pressura-Mono-Regular.otf");
         text = (TextView) findViewById(R.id.textView23);
@@ -262,7 +281,7 @@ public class Landing extends Activity {
                 Log.i("pin entered", pinString);
                 if(pinString.length() == 4)
                 {
-                    if (checkPIN(pinString))
+                    if (++failTime <=3 && checkPIN(pinString))
                     {
                         first.setAlpha(255);
                         second.setAlpha(255);
@@ -286,20 +305,37 @@ public class Landing extends Activity {
 
                     }
 
-                    else
-                    {
-                        Toast.makeText(getApplicationContext(), "Failed to authenticate! Try Again.", Toast.LENGTH_SHORT).show();
-                        first.setAlpha(127);
-                        second.setAlpha(127);
-                        third.setAlpha(127);
-                        fourth.setAlpha(127);
+                    else {
+                        if(failTime >=3) {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(Landing.this);
+                            builder.setTitle("Forgot your Four-digit PIN?");
+                            builder.setMessage("Please login in with your Access ID and Password to change your PIN");
 
-                        first.setImageResource(R.drawable.pinoff);
-                        second.setImageResource(R.drawable.pinoff);
-                        third.setImageResource(R.drawable.pinoff);
-                        fourth.setImageResource(R.drawable.pinoff);
-                        count = 0;
-                        pinString = "";
+                            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent connect = new Intent(Landing.this, ResetPINActivity.class);
+                                    Landing.this.startActivity(connect);
+                                }
+                            });
+                            AlertDialog dialog = builder.create();
+                            dialog.show();
+                        }
+                        else {
+                            Toast.makeText(getApplicationContext(), "Failed to authenticate! Try Again.", Toast.LENGTH_SHORT).show();
+                            first.setAlpha(127);
+                            second.setAlpha(127);
+                            third.setAlpha(127);
+                            fourth.setAlpha(127);
+
+                            first.setImageResource(R.drawable.pinoff);
+                            second.setImageResource(R.drawable.pinoff);
+                            third.setImageResource(R.drawable.pinoff);
+                            fourth.setImageResource(R.drawable.pinoff);
+                            count = 0;
+                            pinString = "";
+                        }
                     }
                 }
 

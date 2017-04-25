@@ -7,11 +7,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<RelativeLayout
+<LinearLayout
     android:id="@+id/activity_help"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorDropdown"
+    android:orientation="vertical"
+    android:background="@color/colorHint"
 
     tools:context="com.example.malki.bktelematics.Help">
     <include
@@ -22,15 +23,56 @@
         android:contentInsetRight="0dp"
         android:contentInsetEnd="0dp"
         android:layout_height="wrap_content"/>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:columnCount="2"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/colorWhite"
+        android:id="@+id/inquiries"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/phonecall"
+            android:layout_gravity="center"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="left"
+            android:layout_gravity="left"
+            android:padding="20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorToolbar"
+                android:text="General Inquiries"
 
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:autoLink="phone"
+                android:id="@+id/phone"
+                android:text="1300 302 199"
+                android:textColor="@color/colorToolbar"
+                />
+        </LinearLayout>
+    </GridLayout>
     <ListView
         android:layout_width="match_parent"
-        android:dividerHeight="1dp"
-        android:divider="@color/colorToolbar"
+        android:dividerHeight="10dp"
+        android:divider="@android:color/transparent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="10dp"
         android:id="@+id/helplist"/>
-</RelativeLayout>
+</LinearLayout>
 
     <ListView
         android:id="@+id/navList"

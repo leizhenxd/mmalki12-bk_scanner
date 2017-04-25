@@ -38,21 +38,7 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="VIN - ENTER MANUALLY"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textColor="@color/colorWhite"
-        android:id="@+id/textView11"
-        android:textSize="18sp"
-
-        android:layout_below="@+id/include"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp" />
-
-    <TextView
-        android:text="Please capture a photo of the full Compliance Plate"
+        android:text="Use the camera to capture a photo of the full Compliance Plate for vehicle with VIN ending"
         android:layout_width="280dp"
         android:textSize="18sp"
         android:textColor="@color/colorWhite"

@@ -141,6 +141,9 @@ public class ScanVIN extends Activity {
                     case "ACTIVITY":
                         connect = new Intent(ScanVIN.this, ActivityLog.class);
                         break;
+                    case "CHANGE PIN":
+                        connect = new Intent(ScanVIN.this, ResetPINActivity.class);
+                        break;
                     case "HELP":
                         connect = new Intent(ScanVIN.this, Help.class);
                         connect.putExtra("verified", true);
@@ -154,7 +157,7 @@ public class ScanVIN extends Activity {
     }
 
     private void addDrawerItems() {
-        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "HELP" };
+        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "CHANGE PIN", "HELP" };
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
     }
@@ -187,8 +190,19 @@ public class ScanVIN extends Activity {
 
             else if (v == manual)
             {
-                Intent connect = new Intent(ScanVIN.this, Manual.class);
+                Intent connect = new Intent(ScanVIN.this, Compliance.class);
                 connect.putExtra("trackerID", trackerID);
+
+                if(fromConnect){
+                    connect.putExtra("fromConnect", true);
+
+                }
+
+                else if (!fromConnect)
+                {
+                    connect.putExtra("fromConnect", false);
+
+                }
 
                 if(fromConnect)
                 {

@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView54"
-        android:text="use the camera to capture a photo"
+        android:text="Use the camera to capture a photo"
         android:layout_below="@+id/include4"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"

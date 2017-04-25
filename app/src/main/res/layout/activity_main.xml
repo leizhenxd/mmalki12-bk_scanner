@@ -68,7 +68,7 @@
         android:id="@+id/navList"
         android:layout_width="200dp"
         android:layout_height="match_parent"
-        android:layout_gravity="right|end"
+        android:layout_gravity="left|start"
         android:background="@color/colorToolbar"/>
 
 </android.support.v4.widget.DrawerLayout>

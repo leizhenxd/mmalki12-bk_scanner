@@ -41,7 +41,7 @@
         android:id="@+id/textView41" />
 
     <Button
-        android:text="CONTINUE"
+        android:text="CONFIRM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -60,30 +60,19 @@
         android:src="@drawable/manualtracker"
         android:layout_marginTop="18dp"
         android:id="@+id/imageView12"
-        android:layout_below="@+id/textView43"
+        android:layout_below="@+id/textView42"
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Please type the 10-digit ID number"
+        android:text="Type the 10-digit ID number"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="18sp"
-        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        android:textColor="@color/colorHint"
         android:layout_marginTop="25dp"
         android:id="@+id/textView42"
         android:layout_below="@+id/textView41"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:text="(located above the tracker barcode)"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-
-
-        android:id="@+id/textView43"
-        android:layout_below="@+id/textView42"
         android:layout_centerHorizontal="true" />
 
     <EditText

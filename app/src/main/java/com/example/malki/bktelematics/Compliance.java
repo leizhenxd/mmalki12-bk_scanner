@@ -34,7 +34,7 @@ public class Compliance extends Activity {
     private ImageView bkhome;
     private boolean fromConnect;
 
-    private String MSG = "Thanks. Now please enter the LAST 6 DIGITS of the vehicle’s VIN.";
+    private String MSG = "Type the last 6 digits of the VIN as shown on the Compliance Plate";
 
     private ImageView hamburger;
     private ListView mDrawerList;
@@ -107,6 +107,9 @@ public class Compliance extends Activity {
                     case "ACTIVITY":
                         connect = new Intent(Compliance.this, ActivityLog.class);
                         break;
+                    case "CHANGE PIN":
+                        connect = new Intent(Compliance.this, ResetPINActivity.class);
+                        break;
                     case "HELP":
                         connect = new Intent(Compliance.this, Help.class);
                         connect.putExtra("verified", true);
@@ -120,7 +123,7 @@ public class Compliance extends Activity {
 
 
     private void addDrawerItems() {
-        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "HELP" };
+        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY","CHANGE PIN", "HELP" };
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
     }
@@ -149,33 +152,21 @@ public class Compliance extends Activity {
 
                         Intent connect;
 
-
+                        connect = new Intent(Compliance.this, Manual.class);
+                        connect.putExtra("trackerID", trackerID);
+                        connect.putExtra("VIN", VIN.getText().toString());
+                        connect.putExtra("manual", true);
 
                         if (fromConnect)
                         {
-
-                            connect = new Intent(Compliance.this, ConfirmPairing.class);
                             connect.putExtra("fromConnect", true);
-                            connect.putExtra("trackerID", trackerID);
-                            connect.putExtra("VIN", VIN.getText().toString());
-                            connect.putExtra("manual", true);
-
-                            Compliance.this.startActivity(connect);
                         }
 
                         else if (!fromConnect)
                         {
-                            connect = new Intent(Compliance.this, DisconnectActivity.class);
                             connect.putExtra("fromConnect", false);
-                            connect.putExtra("trackerID", trackerID);
-                            connect.putExtra("VIN", VIN.getText().toString());
-                            connect.putExtra("manual", true);
-
-                            Compliance.this.startActivity(connect);
                         }
-
-
-
+                        Compliance.this.startActivity(connect);
                     }
 
                     else

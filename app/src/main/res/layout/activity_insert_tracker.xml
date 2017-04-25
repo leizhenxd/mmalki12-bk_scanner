@@ -42,11 +42,11 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Now please insert the Tracker into your vehicle's OBD-II port"
-        android:layout_width="280dp"
+        android:text="Please insert into OBD-II port"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:textColor="@color/colorWhite"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:layout_below="@+id/text3"
         android:layout_centerHorizontal="true"
         android:gravity="center"

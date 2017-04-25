@@ -1,5 +1,6 @@
 package com.example.malki.bktelematics;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -9,6 +10,8 @@ import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.StrictMode;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.test.mock.MockPackageManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -83,6 +86,18 @@ public class BKSigninActivity extends Activity {
         context = getApplicationContext();
         failed = false;
 
+        try {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                    != MockPackageManager.PERMISSION_GRANTED) {
+
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        2);
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
         pref = getSharedPreferences("myfile", 0);
 
@@ -152,9 +167,6 @@ public class BKSigninActivity extends Activity {
             String [] args;
             args = new Encryptor().encryptString(bkUsername.getText().toString(), bkPassword.getText().toString());
 
-
-
-
             String dealerid = "";
             int startID = responseStr.length();
             Boolean present = false;
@@ -164,8 +176,6 @@ public class BKSigninActivity extends Activity {
                 {
                     startID = i + 10;
                     present = true;
-
-
                 }
 
                 if(present)
@@ -181,20 +191,12 @@ public class BKSigninActivity extends Activity {
                     {
                         if(startID == i)
                         {
-
                             dealerid = dealerid.concat(Character.toString(responseStr.charAt(i)));
                             startID++;
                         }
-
-
-
                     }
 
                 }
-
-
-
-
             }
 
             SharedPreferences.Editor editor = pref.edit();

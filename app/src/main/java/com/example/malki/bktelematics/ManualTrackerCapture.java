@@ -3,6 +3,7 @@ package com.example.malki.bktelematics;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
@@ -30,12 +31,16 @@ public class ManualTrackerCapture extends Activity {
 
     private String trackerID;
 
+    private Typeface buttonFont;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manual_tracker_capture);
+        buttonFont = Typeface.createFromAsset(getAssets(), "EngschriftDIND.otf");
 
         button = (Button) findViewById(R.id.button22);
+        button.setTypeface(buttonFont);
 
         image = (ImageView) findViewById(R.id.imageView17);
 

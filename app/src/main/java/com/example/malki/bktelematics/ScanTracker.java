@@ -142,6 +142,9 @@ public class ScanTracker extends Activity {
                     case "ACTIVITY":
                         connect = new Intent(ScanTracker.this, ActivityLog.class);
                         break;
+                    case "CHANGE PIN":
+                        connect = new Intent(ScanTracker.this, ResetPINActivity.class);
+                        break;
                     case "HELP":
                         connect = new Intent(ScanTracker.this, Help.class);
                         connect.putExtra("verified", true);
@@ -160,7 +163,7 @@ public class ScanTracker extends Activity {
     }
 
     private void addDrawerItems() {
-        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "HELP" };
+        String[] osArray = { "HOME", "CONNECT/NEW", "DISCONNECT/SALE", "ACTIVITY", "CHANGE PIN", "HELP" };
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
     }
