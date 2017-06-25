@@ -7,14 +7,17 @@ package com.example.malki.bktelematics;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.graphics.ImageFormat;
 import android.graphics.Rect;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
+import android.hardware.Camera;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.os.StatFs;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -31,12 +34,16 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.example.malki.telematics.R;
+import com.google.gson.Gson;
 import com.manateeworks.BarcodeScanner;
 import com.manateeworks.BarcodeScanner.MWResult;
 import com.manateeworks.CameraManager;
 import com.manateeworks.MWOverlay;
 import com.manateeworks.MWParser;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
@@ -63,7 +70,7 @@ public final class ActivityCapture extends AppCompatActivity
     public static final OverlayMode OVERLAY_MODE = OverlayMode.OM_MWOVERLAY;
 
     // !!! Rects are in format: x, y, width, height !!!
-    public static final Rect RECT_LANDSCAPE_1D = new Rect(3, 20, 94, 60);
+    public static final Rect RECT_LANDSCAPE_1D = new Rect(25, 5, 50, 90);
     public static final Rect RECT_LANDSCAPE_2D = new Rect(20, 5, 60, 90);
     public static final Rect RECT_PORTRAIT_1D = new Rect(20, 3, 60, 94);
     public static final Rect RECT_PORTRAIT_2D = new Rect(20, 5, 60, 90);
@@ -86,9 +93,7 @@ public final class ActivityCapture extends AppCompatActivity
     private int activeThreads = 0;
     public static int MAX_THREADS = Runtime.getRuntime().availableProcessors();
 
-    private ImageButton zoomButton;
     private ImageButton buttonFlash;
-    private ImageView imageOverlay;
 
     boolean flashOn = false;
 
@@ -129,9 +134,8 @@ public final class ActivityCapture extends AppCompatActivity
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(getResources().getIdentifier("activity_capture", "layout", package_name));
-        imageOverlay = (ImageView) findViewById(R.id.imageOverlay);
         // register your copy of library with given key
-        int registerResult = BarcodeScanner.MWBregisterSDK("SDK_Key", this);
+        int registerResult = BarcodeScanner.MWBregisterSDK("zW+h+HFdDEnu5rmctdmf7MFLfjysWM/hWNWXW2aI9pI=", this);
 
         switch (registerResult) {
             case BarcodeScanner.MWB_RTREG_OK:
@@ -187,28 +191,25 @@ public final class ActivityCapture extends AppCompatActivity
 
             // set the scanning rectangle based on scan direction(format in pct:
             // x, y, width, height)
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_25, RECT_FULL_1D);
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_39, RECT_FULL_1D);
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_93, RECT_FULL_1D);
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_128, RECT_FULL_1D);
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_AZTEC, RECT_FULL_2D);
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_DM, RECT_FULL_2D);
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_EANUPC, RECT_FULL_1D);
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_PDF, RECT_FULL_1D);
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_QR, RECT_FULL_2D);
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_RSS, RECT_FULL_1D);
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_CODABAR, RECT_FULL_1D);
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_DOTCODE, RECT_DOTCODE);
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_11, RECT_FULL_1D);
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_MSI, RECT_FULL_1D);
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_MAXICODE, RECT_FULL_1D);
-            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_POSTAL, RECT_FULL_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_25, RECT_LANDSCAPE_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_39, RECT_LANDSCAPE_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_93, RECT_LANDSCAPE_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_128, RECT_LANDSCAPE_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_AZTEC, RECT_LANDSCAPE_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_DM, RECT_LANDSCAPE_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_EANUPC, RECT_LANDSCAPE_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_PDF, RECT_LANDSCAPE_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_QR, RECT_LANDSCAPE_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_RSS, RECT_LANDSCAPE_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_CODABAR, RECT_LANDSCAPE_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_DOTCODE, RECT_LANDSCAPE_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_11, RECT_LANDSCAPE_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_MSI, RECT_LANDSCAPE_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_MAXICODE, RECT_LANDSCAPE_1D);
+            BarcodeScanner.MWBsetScanningRect(BarcodeScanner.MWB_CODE_MASK_POSTAL, RECT_LANDSCAPE_1D);
 
         }
 
-        if (OVERLAY_MODE == OverlayMode.OM_IMAGE) {
-            imageOverlay.setVisibility(View.VISIBLE);
-        }
 
 		/* Analytics */
         /*
@@ -344,33 +345,7 @@ public final class ActivityCapture extends AppCompatActivity
             }
         });
 
-        zoomButton = (ImageButton) findViewById(R.id.zoomButton);
-        zoomButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                zoomLevel++;
-                if (zoomLevel > 2) {
-                    zoomLevel = 0;
-                }
-
-                switch (zoomLevel) {
-                    case 0:
-                        CameraManager.get().setZoom(100);
-                        break;
-                    case 1:
-                        CameraManager.get().setZoom(firstZoom);
-                        break;
-                    case 2:
-                        CameraManager.get().setZoom(secondZoom);
-                        break;
-
-                    default:
-                        break;
-                }
-
-            }
-        });
         buttonFlash = (ImageButton) findViewById(R.id.flashButton);
         buttonFlash.setOnClickListener(new OnClickListener() {
             // @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
@@ -391,9 +366,10 @@ public final class ActivityCapture extends AppCompatActivity
         surfaceHolder = surfaceView.getHolder();
 
 
-        recycleOverlayImage();
         if (OVERLAY_MODE == OverlayMode.OM_MWOVERLAY) {
             MWOverlay.removeOverlay();
+            MWOverlay.blinkingLineColor = 16777215;
+            MWOverlay.isViewportVisible = false;
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -442,7 +418,6 @@ public final class ActivityCapture extends AppCompatActivity
             MWOverlay.removeOverlay();
         }
 
-        imageOverlay.setImageDrawable(null);
 
         CameraManager.get().stopPreview();
         CameraManager.get().closeDriver();
@@ -575,10 +550,63 @@ public final class ActivityCapture extends AppCompatActivity
         }
     }
 
-    public void handleDecode(MWResult result) {
+    class MyPictrueCallback implements Camera.PictureCallback {
+        private String barCode;
+        public MyPictrueCallback(String barCode) {
+            this.barCode = barCode;
+        }
 
+        @Override
+        public void onPictureTaken(byte[] data, Camera camera) {
+            Camera.Parameters ps = camera.getParameters();
+            if(ps.getPictureFormat() == ImageFormat.JPEG){
+                //存储拍照获得的图片
+                String path = save(data);
+                Intent intent = new Intent();
+                intent.putExtra("code", this.barCode);
+                intent.putExtra("imagePath", path);
+
+                ActivityCapture.this.setResult(1, intent);
+                ActivityCapture.this.finish();
+            }
+        }
+    }
+
+    private String save(byte[] data){
+        File folder = new File("/sdcard/telematics/");
+        if(!folder.isDirectory()) folder.mkdir();
+        String path = "/sdcard/telematics/"+System.currentTimeMillis()+".jpg";
+        try {
+            //判断是否装有SD卡
+            if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
+                //判断SD卡上是否有足够的空间
+                String storage = Environment.getExternalStorageDirectory().toString();
+                StatFs fs = new StatFs(storage);
+                long available = fs.getAvailableBlocks()*fs.getBlockSize();
+                if(available<data.length){
+                    //空间不足直接返回空
+                    return null;
+                }
+                File file = new File(path);
+                if(!file.exists())
+                    //创建文件
+                    file.createNewFile();
+                FileOutputStream fos = new FileOutputStream(file);
+                fos.write(data);
+                fos.close();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+        return path;
+    }
+    public void handleDecode(MWResult result) {
+        Log.i("########", new Gson().toJson(result));
         String typeName = result.typeName;
         String barcode = result.text;
+
+
 
         /* Parser */
         /*
@@ -645,19 +673,15 @@ public final class ActivityCapture extends AppCompatActivity
             typeName += " (GS1)";
         }
 
-        new AlertDialog.Builder(this)
-                .setOnDismissListener(new DialogInterface.OnDismissListener() {
-                    @Override
-                    public void onDismiss(DialogInterface dialog) {
-                        if (decodeHandler != null) {
-                            decodeHandler.sendEmptyMessage(ID_RESTART_PREVIEW);
-                        }
-                    }
-                })
-                .setTitle(typeName)
-                .setMessage(barcode)
-                .setNegativeButton("Close", null)
-                .show();
+        Camera.Parameters parameters = CameraManager.get().camera.getParameters();
+        parameters.setJpegQuality(100);
+        parameters.setPictureSize(result.imageWidth, result.imageHeight);
+
+        CameraManager.get().camera.setParameters(parameters);
+        CameraManager.get().camera.takePicture(null,null, new MyPictrueCallback(barcode));
+
+
+
 
 		/* Analytics */
         /*
@@ -669,7 +693,7 @@ public final class ActivityCapture extends AppCompatActivity
 		 * Manifest.permission.ACCESS_FINE_LOCATION) !=
 		 * PackageManager.PERMISSION_GRANTED) { encResult =
 		 * result.encryptedResult; tName = typeName;
-		 * 
+		 *
 		 * if
 		 * (ActivityCompat.shouldShowRequestPermissionRationale(ActivityCapture.
 		 * this, Manifest.permission.ACCESS_FINE_LOCATION)) {
@@ -729,18 +753,6 @@ public final class ActivityCapture extends AppCompatActivity
                 CameraManager.get().openDriver(surfaceHolder,
                         (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT));
 
-                int maxZoom = CameraManager.get().getMaxZoom();
-                if (maxZoom < 100) {
-                    zoomButton.setVisibility(View.GONE);
-                } else {
-                    zoomButton.setVisibility(View.VISIBLE);
-                    if (maxZoom < 300) {
-                        secondZoom = maxZoom;
-                        firstZoom = (maxZoom - 100) / 2 + 100;
-
-                    }
-
-                }
             } catch (IOException ioe) {
                 displayFrameworkBugMessageAndExit(ioe.getMessage());
                 return;
@@ -794,23 +806,5 @@ public final class ActivityCapture extends AppCompatActivity
             }
         });
         builder.show();
-    }
-    protected void recycleOverlayImage() {
-
-        if (OVERLAY_MODE == OverlayMode.OM_IMAGE) {
-            ((ImageView)imageOverlay.findViewById(R.id.imageOverlay)).setImageDrawable(getResources().getDrawable(R.drawable.overlay));
-        }else{
-
-            Drawable imageDrawable = imageOverlay.getDrawable();
-            imageOverlay.setImageDrawable(null);
-
-            if (imageDrawable!=null && imageDrawable instanceof BitmapDrawable) {
-                BitmapDrawable bitmapDrawable = ((BitmapDrawable) imageDrawable);
-
-                if (!bitmapDrawable.getBitmap().isRecycled()) {
-                    bitmapDrawable.getBitmap().recycle();
-                }
-            }
-        }
     }
 }

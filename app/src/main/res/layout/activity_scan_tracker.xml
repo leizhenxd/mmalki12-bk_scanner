@@ -43,18 +43,6 @@
 
 
     <TextView
-        android:text="Auto scan the tracker barcode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:textColor="@color/colorWhite"
-        android:layout_below="@+id/imageView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
-        android:id="@+id/textView35" />
-
-    <TextView
         android:text="(Or if the barcode does not scan)"
         android:layout_width="wrap_content"
         android:textColor="@color/colorHint"
@@ -80,7 +68,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Scan Tracker"
+        android:text="AUTO SCAN TRACKER"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAllCaps="true"
@@ -89,9 +77,8 @@
         android:stateListAnimator="@null"
         android:id="@+id/button17"
         android:textSize="24sp"
-
-
-        android:layout_below="@+id/textView35"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true" />
 
     <ImageView

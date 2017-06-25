@@ -37,25 +37,12 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorHint"
         android:gravity="center"
-        android:layout_above="@+id/button13"
+        android:layout_above="@+id/button12"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:layout_marginBottom="177dp"
         android:textSize="18sp" />
 
-    <Button
-        android:text="Cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button13"
-        android:layout_marginBottom="72dp"
-        android:textSize="24sp"
-        android:textAllCaps="true"
-        android:background="@color/colorBackground"
-        android:textColor="@color/colorButton"
-        android:stateListAnimator="@null"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/editText11"
-        android:layout_alignEnd="@+id/editText11" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -79,12 +66,13 @@
         android:id="@+id/button12"
         android:textSize="24sp"
         android:textAllCaps="true"
-        android:background="@color/colorBackground"
+        android:background="@android:color/transparent"
         android:textColor="@color/colorButton"
         android:stateListAnimator="@null"
-        android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        />
 
 </RelativeLayout>
 

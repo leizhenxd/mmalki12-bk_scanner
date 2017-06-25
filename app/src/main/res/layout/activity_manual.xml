@@ -63,6 +63,18 @@
         android:textSize="24sp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="THANKS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/colorBackground"
+        android:gravity="center"
+        android:layout_above="@+id/textView39"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textThanks"
+        android:layout_marginBottom="39dp" />
 </RelativeLayout>
 
     <ListView

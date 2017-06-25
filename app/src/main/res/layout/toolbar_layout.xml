@@ -63,7 +63,7 @@
             android:layout_height="28dp"
             android:layout_gravity="right"
             android:id="@id/list"
-            android:src="@drawable/hamburger" />
+            android:src="@drawable/ham" />
 
     </android.support.v7.widget.Toolbar>
     

@@ -55,7 +55,7 @@ public class Help extends Activity implements customButtonListener {
         home = (ImageView) this.findViewById(R.id.bkhome);
 
         home.setVisibility(View.GONE);
-        title.setText("HELP PAGE");
+        title.setText("HELP");
         title.setTextSize(18);
         title.setTextColor(getResources().getColor(R.color.colorButton));
         HelpAdapter listA =  new HelpAdapter(Help.this, R.layout.help_item, list);

@@ -54,6 +54,11 @@ public class ResetPINActivity extends Activity {
         pin = (EditText) findViewById(R.id.pin);
         repin = (EditText) findViewById(R.id.repin);
 
+        userName.setTypeface(font);
+        password.setTypeface(font);
+        pin.setTypeface(font);
+        repin.setTypeface(font);
+
         pref = getSharedPreferences("myfile", 0);
 
         resetPin.setOnClickListener(new View.OnClickListener() {

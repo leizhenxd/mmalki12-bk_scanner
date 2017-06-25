@@ -63,7 +63,6 @@ public class PromptDiscActivity extends Activity {
 
     private TextView text;
     private Button confirm;
-    private Button cancel;
     private EditText other;
 
     private ImageView bkhome;
@@ -105,13 +104,11 @@ public class PromptDiscActivity extends Activity {
 
         text = (TextView) this.findViewById(R.id.textView);
         confirm = (Button) this.findViewById(R.id.button12);
-        cancel = (Button) this.findViewById(R.id.button13);
         other = (EditText) this.findViewById(R.id.editText11);
         bkhome = (ImageView) this.findViewById(R.id.bkhome);
 
         text.setTypeface(fontText);
         confirm.setTypeface(fontButton);
-        cancel.setTypeface(fontButton);
 
         pref = getSharedPreferences("myfile", 0);
 
@@ -144,7 +141,6 @@ public class PromptDiscActivity extends Activity {
 
         bkhome.setOnClickListener(handler);
         confirm.setOnClickListener(handler);
-        cancel.setOnClickListener(handler);
 
         try {
             if (ActivityCompat.checkSelfPermission(this, mPermission)
@@ -247,11 +243,6 @@ public class PromptDiscActivity extends Activity {
                     Intent connect = new Intent(PromptDiscActivity.this, MainActivity.class);
                     PromptDiscActivity.this.startActivity(connect);
                 }
-            } else if (v == cancel) {
-                Intent connect = new Intent(PromptDiscActivity.this, DisconnectActivity.class);
-                connect.putExtra("trackerID", trackerID);
-                connect.putExtra("VIN", VIN);
-                PromptDiscActivity.this.startActivity(connect);
             } else if (v == bkhome) {
                 Intent connect = new Intent(PromptDiscActivity.this, MainActivity.class);
                 PromptDiscActivity.this.startActivity(connect);

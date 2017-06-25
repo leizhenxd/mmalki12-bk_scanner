@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="40dp"
+        android:minHeight="50dp"
         android:layout_marginLeft="3dp"
         android:layout_marginStart="3dp"
         android:background="@color/colorWhite"
@@ -20,12 +20,14 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
         android:layout_toLeftOf="@+id/button21"
         android:layout_toStartOf="@+id/button21" />
 
     <ImageView
         android:layout_width="50dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:tag=""
         android:background="@color/colorWhite"
         android:layout_alignParentTop="true"
@@ -43,6 +45,9 @@
         android:layout_marginLeft="3dp"
         android:layout_marginStart="3dp"
         android:layout_below="@+id/textView52"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:autoLink="web"
         android:layout_centerHorizontal="true"
         android:id="@+id/textView53" />
 

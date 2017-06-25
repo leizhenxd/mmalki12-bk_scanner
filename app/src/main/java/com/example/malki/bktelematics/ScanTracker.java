@@ -4,12 +4,14 @@ import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -45,7 +47,6 @@ public class ScanTracker extends Activity {
     private Button manual;
     private Activity activity;
     private TextView text;
-    private TextView text2;
     private ImageView arrow;
     private TextView text3;
 
@@ -87,8 +88,6 @@ public class ScanTracker extends Activity {
 
 
         activity = this;
-        text2 =
-                (TextView) findViewById(R.id.textView35);
         text3 = (TextView) findViewById(R.id.textView36);
         bkhome = (ImageView) findViewById(R.id.bkhome);
         text = (TextView) findViewById(R.id.textView15);
@@ -98,7 +97,6 @@ public class ScanTracker extends Activity {
 
         manual.setOnClickListener(handler);
 
-        text2.setTypeface(fontText);
         text3.setTypeface(fontText);
         text.setTypeface(fontText);
         scanTracker.setTypeface(fontButton);
@@ -200,114 +198,69 @@ public class ScanTracker extends Activity {
 
     protected void scan(View view)
     {
-        IntentIntegrator integrator = new IntentIntegrator(activity);
+        /*IntentIntegrator integrator = new IntentIntegrator(activity);
         integrator.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES);
         integrator.setPrompt("Scan");
         integrator.setCameraId(0);
         integrator.setBeepEnabled(false);
         integrator.setBarcodeImageEnabled(true);
-        integrator.initiateScan();
+        integrator.initiateScan();*/
+
+        startActivityForResult(new Intent(ScanTracker.this, ActivityCapture.class), 1);
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent)
     {
 
-
-//            dispatchTakePictureIntent();
-        IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
-
-        ImagePathCache.picturePath = intent.getStringExtra("SCAN_RESULT_IMAGE_PATH");
-
-        if(scanResult != null)
-        {
-            if(scanResult.getContents() == null)
-            {
-                Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
-            }
-
-            else
-            {
+        super.onActivityResult(requestCode, resultCode, intent);
+        if(intent == null) return ;
+        switch (requestCode) {
+            case 1:
+                String barcode = intent.getStringExtra("code");
+                ImagePathCache.picturePath = intent.getStringExtra("imagePath");
+                if(barcode != null) {
 
 
+                        trackerID = barcode;
 
-                String type = scanResult.getFormatName();
+                        if (trackerID.length() == 10)
+                        {
+                            if(fromConnect)
+                            {
+                                Toast.makeText(this, "Success - Black Knight ID " + trackerID + " captured.", Toast.LENGTH_SHORT).show();
+                                //new MyAsyncTask().execute();
+                                Intent connect = new Intent(ScanTracker.this, InsertTracker.class);
+                                connect.putExtra("trackerID", trackerID);
+                                connect.putExtra("fromConnect", true);
+                                ScanTracker.this.startActivity(connect);
+                            }
 
-                trackerID = scanResult.getContents();
-
-                if (trackerID.length() == 10)
-                {
-                    if(fromConnect)
-                    {
-                        Toast.makeText(this, "Success - Black Knight ID " + trackerID + " captured.", Toast.LENGTH_SHORT).show();
-                        //new MyAsyncTask().execute();
-                        Intent connect = new Intent(ScanTracker.this, InsertTracker.class);
-                        connect.putExtra("trackerID", trackerID);
-                        connect.putExtra("fromConnect", true);
-                        ScanTracker.this.startActivity(connect);
-                    }
-
-                    else if (!fromConnect)
-                    {
-                        Toast.makeText(this, "Success - Black Knight ID " + trackerID + " captured.", Toast.LENGTH_SHORT).show();
+                            else if (!fromConnect)
+                            {
+                                Toast.makeText(this, "Success - Black Knight ID " + trackerID + " captured.", Toast.LENGTH_SHORT).show();
 
 
-                        Intent connect = new Intent(ScanTracker.this, CaptureMessage.class);
-                        connect.putExtra("trackerID", trackerID);
-                        connect.putExtra("fromConnect", false);
-                        //connect.putExtra("display1", "Black Knight ID ");
-                        //connect.putExtra("display2", " disconnected. Now please scan the VIN barcode");
-                        ScanTracker.this.startActivity(connect);
-                    }
+                                Intent connect = new Intent(ScanTracker.this, CaptureMessage.class);
+                                connect.putExtra("trackerID", trackerID);
+                                connect.putExtra("fromConnect", false);
+                                //connect.putExtra("display1", "Black Knight ID ");
+                                //connect.putExtra("display2", " disconnected. Now please scan the VIN barcode");
+                                ScanTracker.this.startActivity(connect);
+                            }
 
+                        }
+
+                        else
+                        {
+                            Toast.makeText(this, "Invalid tracker barcode", Toast.LENGTH_SHORT).show();
+                        }
                 }
-
-                else
-                {
-                    Toast.makeText(this, "Invalid tracker barcode", Toast.LENGTH_SHORT).show();
+                else {
+                    Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
                 }
-
-
-
-
-
-
-//
-//                if (type.equals("CODE_39"))
-//                {
-//
-//                    VIN.append(barcode);
-//                    scanVINButton.setVisibility(View.INVISIBLE);
-//                    VIN.setVisibility(View.VISIBLE);
-//                    //vin = Integer.parseInt(barcode);
-//                }
-//
-//                else
-//                {
-//                    tracker.append(barcode);
-//                    scanTrackerButton.setVisibility(View.INVISIBLE);
-//                    tracker.setVisibility(View.VISIBLE);
-//                    //sn = Integer.parseInt(barcode);
-//                }
-
-
-            }
-
-
 
         }
 
-
-
-
-//        if(!(VIN.getText().equals("VIN: ")) && !(tracker.getText().equals("Tracker Barcode: ")))
-//        {
-//            //marryToDatabase.setVisibility(View.VISIBLE);
-//            // marty to database
-//            new ConnectActivity.MyAsyncTask().execute(bkUsername, bkPassword);
-//
-//            Intent connect = new Intent(ConnectActivity.this, MainActivity.class);
-//            ConnectActivity.this.startActivity(connect);
-//        }
     }
 
     private void handleResponse(String str)

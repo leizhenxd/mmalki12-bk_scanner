@@ -59,6 +59,7 @@
         android:src="@drawable/tracker_image"
         android:id="@+id/imageView6"
         android:layout_above="@+id/button2"
+        android:layout_marginBottom="30dp"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -88,7 +89,8 @@
         android:text="(usually under the driver's console)"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/textView25"
+        android:layout_marginTop="15dp"
         android:gravity="center"
         android:layout_centerHorizontal="true"
         android:textColor="@color/colorHint"
